@@ -414,3 +414,86 @@ body{background:#f7f9fc;color:var(--text)}
  .payment-way-grid,.payments-services-grid,.fee-options,.interest-grid,.form-grid,.pos-bullets,.integration-stack{grid-template-columns:1fr}
  .funding-bridge-card{display:grid}
 }
+
+
+/* =========================================================
+   V10 — HERO / INDUSTRY / PAYMENTS POLISH
+   ========================================================= */
+.hero-v10{
+  position:relative;
+  padding:50px 0 32px;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(34,139,255,.12),transparent 34%),
+    linear-gradient(180deg,#fff,#f7fbff);
+  overflow:hidden;
+}
+.hero-v10:before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(13,112,220,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(13,112,220,.035) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom,#000 0%,transparent 90%);
+  pointer-events:none;
+}
+.hero-v10-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:50px;align-items:center}
+.hero-v10-copy{max-width:620px}
+.hero-v10 h1{font-size:clamp(4.1rem,5.25vw,6.15rem);line-height:.93;letter-spacing:-.058em;margin:8px 0 24px}
+.hero-v10 h1 span,.hero-v10 h1 em{display:block}
+.hero-v10 h1 span{color:#071b31}
+.hero-v10 h1 em{color:#1685ff;font-style:normal;margin-top:8px}
+.hero-v10 .hero-lead{font-size:1.06rem;line-height:1.7;color:#4e6984;max-width:590px}
+.hero-v10-visual{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}
+.hero-v10-visual img{position:relative;z-index:2;width:108%;max-width:900px;height:auto;object-fit:contain;filter:drop-shadow(0 28px 44px rgba(5,45,91,.18))}
+.hero-network-orb{position:absolute;border:1px solid rgba(26,135,255,.19);border-radius:50%;z-index:1}
+.hero-network-orb-a{width:560px;height:560px;right:-80px;top:-30px}
+.hero-network-orb-b{width:380px;height:380px;right:40px;top:60px}
+.hero-proof-v10{position:relative;z-index:2;margin-top:18px;grid-template-columns:1fr 1.15fr 1.34fr}
+.hero-proof-v10 .proof-item strong{font-size:.98rem;white-space:nowrap}
+@media(max-width:1100px){.hero-v10-grid{grid-template-columns:1fr}.hero-v10-visual{min-height:auto}.hero-v10-visual img{width:100%;max-width:920px}.hero-proof-v10{grid-template-columns:1fr}}
+@media(max-width:720px){.hero-v10 h1{font-size:clamp(3.2rem,13vw,4.6rem)}.hero-proof-v10 .proof-item strong{white-space:normal}}
+
+/* Clean industry image headers — prevent all duplicate/overlap artifacts */
+.visual-card{overflow:hidden}
+.industry-image-wrap{height:150px;position:relative;overflow:hidden;border-radius:22px 22px 0 0;background:#eef4fa}
+.industry-image-wrap>img:first-child{width:100%;height:100%;object-fit:cover;display:block}
+.visual-card>img{display:none!important}
+.industry-card-body{position:relative;z-index:3;background:#fff;margin-top:0}
+.industry-card-body:before{display:none!important}
+.propel-overlay-logo{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:68%!important;height:auto!important;max-height:72%!important;object-fit:contain!important;z-index:2!important}
+
+/* Payments feature — stronger, tighter, more visual */
+.payments-home-v10{padding:64px 0}
+.payments-v10-card{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:32px;
+  padding:38px 42px 26px;
+  border-radius:30px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 90% 12%,rgba(22,143,255,.28),transparent 30%),
+    linear-gradient(135deg,#06192f 0%,#06366c 58%,#0752a4 100%);
+  box-shadow:0 28px 68px rgba(7,38,80,.22);
+}
+.payments-v10-intro h2{font-size:clamp(2.65rem,3.8vw,4.3rem);line-height:.98;letter-spacing:-.045em;margin:7px 0 16px}
+.payments-v10-intro h2 em{display:block;color:#70baff;font-style:normal}
+.payments-v10-intro p{color:#d3e5f6;line-height:1.65}
+.payments-v10-capabilities{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-self:stretch}
+.payments-v10-capabilities article{padding:18px 22px;border-left:1px solid rgba(255,255,255,.15)}
+.cap-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#168aff;font-weight:900;margin-bottom:16px}
+.payments-v10-capabilities h3{font-size:1rem;line-height:1.2;margin:0 0 12px}
+.payments-v10-capabilities ul{list-style:none;padding:0;margin:0;color:#d8e8f6;font-size:.84rem;line-height:1.65}
+.payments-v10-capabilities li:before{content:"✓ ";color:#fff}
+.payments-v10-crosssell{grid-column:2;display:flex;gap:12px;align-items:flex-start;border-top:1px solid rgba(255,255,255,.16);padding-top:18px;margin-top:-4px}
+.payments-v10-crosssell p{margin:0;color:#d2e4f5;font-size:.82rem;line-height:1.5}
+.payments-v10-crosssell strong{color:#fff}
+.shield-mark{display:grid;place-items:center;width:30px;height:30px;flex:0 0 auto;border-radius:50%;background:rgba(255,255,255,.12)}
+@media(max-width:1050px){.payments-v10-card{grid-template-columns:1fr}.payments-v10-capabilities{grid-template-columns:1fr 1fr}.payments-v10-crosssell{grid-column:1}}
+@media(max-width:600px){.payments-v10-capabilities{grid-template-columns:1fr}.payments-v10-capabilities article{border-left:0;border-top:1px solid rgba(255,255,255,.15)}}
+
+/* Payment form ordering/presentation */
+.form-step-label{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#0e3155;margin:0 0 16px}
+.form-step-label span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1688ff;color:#fff;font-size:.72rem}
+.form-step-label.inline{margin:0}
+.payment-analysis-form fieldset{margin-top:28px;margin-bottom:28px;padding-top:24px;border-top:1px solid #e1ebf5}
+.payment-analysis-form legend{padding:0 12px 0 0}

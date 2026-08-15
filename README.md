@@ -36,3 +36,13 @@ No public street or home address is included.
 - Homepage payment section rebuilt as a concise Eagle Vision Payments teaser.
 - Full payments.html page added with payment methods, cost-reduction strategies, POS, integrations, invoicing, gift cards, loyalty, reporting, mobile, e-commerce, recurring payments, ACH/eCheck, business funding bridge, and free payment analysis form.
 - Public-facing payment language is written for business owners, not ISO/agent recruitment.
+
+## V10 Updates
+- Hero now uses a standalone transparent device ecosystem asset, not a screenshot of the page.
+- Hero background is native CSS so it blends seamlessly.
+- Proof strip aligned; third heading remains single-line on desktop.
+- Industry image/card overlap artifacts removed.
+- Homepage Payments feature rebuilt to match approved tighter premium layout.
+- Homepage Payment Analysis questionnaire removed.
+- Homepage CTAs now route to the dedicated Payments page / Payment Analysis.
+- Payments form reordered: business/contact info first, interests second, optional uploads/notes third.

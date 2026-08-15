@@ -152,11 +152,23 @@
       <div class="payment-analysis-intro">
         <div class="eyebrow"><span></span> Free Payment Analysis</div>
         <h2>Let's find the right solution for your business.</h2>
-        <p>Tell us what you're looking for. Uploading processing statements is optional, but can help us identify rates, fees and potential savings opportunities.</p>
-        <p class="secure-note">Please remove or redact any sensitive cardholder information before uploading statements.</p>
+        <p>Start with your business information. Then tell us what you're interested in and, if you'd like, upload recent processing statements so we can take a closer look.</p>
+        <p class="secure-note">Statement uploads are optional. Please remove or redact any sensitive cardholder information before uploading.</p>
       </div>
       <form class="payment-analysis-form" action="mailto:info@eaglevision.biz" method="post" enctype="multipart/form-data">
-        <fieldset><legend>Areas of Interest</legend>
+        <div class="form-step-label"><span>01</span> Your Business</div>
+        <div class="form-grid">
+          <label>Full Name*<input type="text" name="name" required></label>
+          <label>Email Address*<input type="email" name="email" required></label>
+          <label>Phone Number*<input type="tel" name="phone" required></label>
+          <label>Business Name*<input type="text" name="business" required></label>
+          <label>City*<input type="text" name="city" required></label>
+          <label>State / Province*<input type="text" name="state" required></label>
+          <label>Type of Business*<input type="text" name="business_type" required></label>
+          <label>Approx. Monthly Card Volume<select name="volume"><option value="">Select range</option><option>Under $10,000</option><option>$10,000–$25,000</option><option>$25,000–$50,000</option><option>$50,000–$100,000</option><option>$100,000–$250,000</option><option>$250,000+</option></select></label>
+        </div>
+        <fieldset>
+          <legend><span class="form-step-label inline"><span>02</span> Areas of Interest</span></legend>
           <div class="interest-grid">
             <label><input type="checkbox" name="interest" value="Credit Card Processing"> Credit & Debit Processing</label>
             <label><input type="checkbox" name="interest" value="Reduce Fees"> Reduce Processing Fees</label>
@@ -177,17 +189,10 @@
             <label><input type="checkbox" name="interest" value="Other"> Other</label>
           </div>
         </fieldset>
+        <div class="form-step-label"><span>03</span> Optional Details</div>
         <div class="form-grid">
-          <label>Full Name*<input type="text" name="name" required></label>
-          <label>Email Address*<input type="email" name="email" required></label>
-          <label>Phone Number*<input type="tel" name="phone" required></label>
-          <label>Business Name*<input type="text" name="business" required></label>
-          <label>City*<input type="text" name="city" required></label>
-          <label>State / Province*<input type="text" name="state" required></label>
-          <label>Type of Business*<input type="text" name="business_type" required></label>
-          <label>Approx. Monthly Card Volume<select name="volume"><option value="">Select range</option><option>Under $10,000</option><option>$10,000–$25,000</option><option>$25,000–$50,000</option><option>$50,000–$100,000</option><option>$100,000–$250,000</option><option>$250,000+</option></select></label>
-          <label class="full">Optional Processing Statements<input type="file" name="statements" accept=".pdf,.png,.jpg,.jpeg" multiple></label>
-          <label class="full">Additional Notes<textarea name="notes" rows="5"></textarea></label>
+          <label class="full">Processing Statements — optional<input type="file" name="statements" accept=".pdf,.png,.jpg,.jpeg" multiple></label>
+          <label class="full">Additional Notes<textarea name="notes" rows="5" placeholder="Tell us anything else that would help us understand your goals or current setup."></textarea></label>
         </div>
         <button class="btn btn-primary" type="submit">Request My Eagle Vision Review →</button>
       </form>
