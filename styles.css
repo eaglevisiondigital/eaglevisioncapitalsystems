@@ -1535,3 +1535,55 @@ body{background:#f7f9fc;color:var(--text)}
     padding-top:24px;
   }
 }
+
+
+/* =========================================================
+   V19 — APPROVED CARD CONTENT / ROW ALIGNMENT
+   Equalized content rhythm across all six hero cards
+   ========================================================= */
+.hero-solution-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.hero-card-copy{
+  margin-top:auto;
+  padding-top:28px;
+  min-height:194px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.hero-card-copy small{
+  min-height:18px;
+}
+
+.hero-card-copy h3{
+  min-height:2.3em;
+  display:flex;
+  align-items:flex-start;
+}
+
+.hero-card-copy p{
+  margin-top:0;
+  line-height:1.5;
+}
+
+@media(min-width:1321px){
+  .hero-card-copy{
+    min-height:205px;
+  }
+}
+
+@media(max-width:800px){
+  .hero-card-copy{
+    min-height:185px;
+  }
+}
+
+@media(max-width:520px){
+  .hero-card-copy{
+    min-height:auto;
+  }
+}
