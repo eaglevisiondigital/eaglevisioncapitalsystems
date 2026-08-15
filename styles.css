@@ -497,3 +497,250 @@ body{background:#f7f9fc;color:var(--text)}
 .form-step-label.inline{margin:0}
 .payment-analysis-form fieldset{margin-top:28px;margin-bottom:28px;padding-top:24px;border-top:1px solid #e1ebf5}
 .payment-analysis-form legend{padding:0 12px 0 0}
+
+
+/* =========================================================
+   V11 — APPROVED INDUSTRY SECTION REBUILT CLEANLY
+   No legacy overlaps. Each card is an independent component.
+   ========================================================= */
+.industries-v11{
+  padding:72px 0 78px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(26,136,255,.06), transparent 34%),
+    linear-gradient(180deg,#f9fcff 0%,#eef6fb 100%);
+}
+.industries-v11 .section-heading{
+  max-width:980px;
+  margin:0 auto 42px;
+}
+.industries-v11 .section-heading h2{
+  font-size:clamp(3rem,4.8vw,5.25rem);
+  line-height:.98;
+  letter-spacing:-.05em;
+  margin:10px 0 18px;
+}
+.industries-v11 .section-heading h2 em{
+  color:#1685ff;
+  font-style:normal;
+}
+.industries-v11 .section-heading p{
+  max-width:800px;
+  margin:0 auto;
+  font-size:1.05rem;
+  line-height:1.65;
+  color:#607890;
+}
+
+.industry-v11-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:16px;
+  align-items:stretch;
+}
+
+.industry-v11-card{
+  --accent:#1685ff;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid #dfe9f4;
+  border-radius:22px;
+  box-shadow:0 16px 34px rgba(11,57,104,.07);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.industry-v11-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 22px 48px rgba(11,57,104,.12);
+}
+
+.industry-v11-media{
+  position:relative;
+  height:152px;
+  overflow:visible;
+  background:#eaf2f8;
+}
+.industry-v11-media>img:first-child{
+  display:block;
+  width:100%;
+  height:152px;
+  object-fit:cover;
+  border-radius:21px 21px 0 0;
+}
+.industry-v11-icon{
+  position:absolute;
+  left:18px;
+  bottom:-26px;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  z-index:3;
+  background:#fff;
+  border:2px solid color-mix(in srgb,var(--accent) 72%,white);
+  color:var(--accent);
+  box-shadow:0 7px 18px rgba(12,55,98,.16);
+  font-size:23px;
+  font-weight:900;
+}
+.industry-v11-propel-logo{
+  position:absolute;
+  z-index:2;
+  top:16px;
+  left:50%;
+  transform:translateX(-50%);
+  width:70%;
+  height:auto;
+  max-height:58px;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 7px rgba(0,0,0,.42));
+}
+
+.industry-v11-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  min-height:390px;
+  padding:42px 18px 20px;
+}
+.industry-v11-label{
+  color:var(--accent);
+  font-size:.69rem;
+  line-height:1.35;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  min-height:38px;
+  margin-bottom:10px;
+}
+.industry-v11-card h3{
+  color:var(--accent);
+  font-size:1.27rem;
+  line-height:1.15;
+  letter-spacing:-.025em;
+  margin:0 0 14px;
+}
+.industry-v11-card p{
+  color:#5a7289;
+  font-size:.9rem;
+  line-height:1.58;
+  margin:0 0 22px;
+}
+.industry-v11-cta{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--accent);
+  font-size:.86rem;
+  font-weight:850;
+  text-decoration:none;
+}
+.industry-v11-cta span{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:var(--accent);
+  transition:transform .2s ease;
+}
+.industry-v11-card:hover .industry-v11-cta span{
+  transform:translateX(3px);
+}
+
+.industry-antique{--accent:#f05a14}
+.industry-rv{--accent:#c68a00}
+.industry-propel{--accent:#218b24}
+.industry-auto{--accent:#116fff}
+.industry-health{--accent:#008f96}
+.industry-business{--accent:#6f2dbd}
+
+/* Disable all legacy card styling inside the rebuilt section */
+.industries-v11 .visual-card,
+.industries-v11 .industry-card,
+.industries-v11 .industry-image-wrap,
+.industries-v11 .industry-card-body{
+  all:unset;
+}
+
+/* Tablet */
+@media(max-width:1200px){
+  .industry-v11-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+  }
+  .industry-v11-body{min-height:330px}
+  .industry-v11-media,
+  .industry-v11-media>img:first-child{
+    height:170px;
+  }
+}
+
+/* Large phone / small tablet */
+@media(max-width:760px){
+  .industries-v11{
+    padding:52px 0 58px;
+  }
+  .industry-v11-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+  }
+  .industry-v11-body{
+    min-height:345px;
+  }
+  .industry-v11-media,
+  .industry-v11-media>img:first-child{
+    height:155px;
+  }
+}
+
+/* Mobile — cards stack fully, preserving image/icon/header hierarchy */
+@media(max-width:520px){
+  .industries-v11 .section-heading{
+    margin-bottom:30px;
+  }
+  .industries-v11 .section-heading h2{
+    font-size:clamp(2.65rem,12vw,3.7rem);
+  }
+  .industry-v11-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .industry-v11-card{
+    border-radius:24px;
+  }
+  .industry-v11-media,
+  .industry-v11-media>img:first-child{
+    height:205px;
+  }
+  .industry-v11-icon{
+    width:58px;
+    height:58px;
+    left:22px;
+    bottom:-28px;
+  }
+  .industry-v11-body{
+    min-height:0;
+    padding:46px 22px 22px;
+  }
+  .industry-v11-label{
+    min-height:0;
+    font-size:.72rem;
+  }
+  .industry-v11-card h3{
+    font-size:1.5rem;
+  }
+  .industry-v11-card p{
+    font-size:.98rem;
+  }
+  .industry-v11-cta{
+    margin-top:18px;
+    font-size:.92rem;
+  }
+}

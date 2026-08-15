@@ -46,3 +46,12 @@ No public street or home address is included.
 - Homepage Payment Analysis questionnaire removed.
 - Homepage CTAs now route to the dedicated Payments page / Payment Analysis.
 - Payments form reordered: business/contact info first, interests second, optional uploads/notes third.
+
+## V11 Updates
+- Industry section rebuilt from scratch to match the approved visual direction.
+- Six independent responsive industry cards; no layered legacy markup.
+- Approved public-facing solution names retained.
+- Correct Propel logo overlay retained.
+- Color system retained: orange, gold, green, blue, teal, purple.
+- Responsive behavior: 6 across desktop, 3 across tablet, 2 across small tablet, 1 stacked on mobile.
+- Image/header/icon/body/CTA are discrete layout regions to prevent overlap on any screen size.
