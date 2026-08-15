@@ -55,3 +55,10 @@ No public street or home address is included.
 - Color system retained: orange, gold, green, blue, teal, purple.
 - Responsive behavior: 6 across desktop, 3 across tablet, 2 across small tablet, 1 stacked on mobile.
 - Image/header/icon/body/CTA are discrete layout regions to prevent overlap on any screen size.
+
+## V20 — Locked Industry Cards
+- Completely removed the prior coded industry-card implementation.
+- Installed the six individually approved/locked 1024×1536 transparent PNG cards with no crop, resize, redesign, or text changes.
+- Cards are displayed in identical 2:3 containers for consistent alignment.
+- Entire card is clickable.
+- Outpost and Propel open in a new tab; internal Eagle Vision solution pages remain in the same tab.
