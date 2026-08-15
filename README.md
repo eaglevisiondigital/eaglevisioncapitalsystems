@@ -26,3 +26,13 @@ Serving businesses and organizations nationwide, with select solutions available
 10. Corporate CTA / footer
 
 No public street or home address is included.
+
+
+## V9 Updates
+- Approved high-impact homepage hero composition added.
+- Hero proof strip third message expanded to a single-line bold heading on desktop.
+- Industry cards finalized with public-facing names and approved six-color treatment.
+- Correct approved transparent Propel logo over church/ministry image.
+- Homepage payment section rebuilt as a concise Eagle Vision Payments teaser.
+- Full payments.html page added with payment methods, cost-reduction strategies, POS, integrations, invoicing, gift cards, loyalty, reporting, mobile, e-commerce, recurring payments, ACH/eCheck, business funding bridge, and free payment analysis form.
+- Public-facing payment language is written for business owners, not ISO/agent recruitment.
