@@ -62,3 +62,20 @@ No public street or home address is included.
 - Cards are displayed in identical 2:3 containers for consistent alignment.
 - Entire card is clickable.
 - Outpost and Propel open in a new tab; internal Eagle Vision solution pages remain in the same tab.
+
+## V22 — Eagle Vision Payments + Savings Calculators
+- Homepage Eagle Vision Payments section fully rebuilt as a premium visual payment ecosystem.
+- Expanded use cases: retail, restaurants, mobile, e-commerce, invoices, subscriptions, online courses, memberships, websites, apps, platforms, ACH/eCheck, gift cards, loyalty, funding and more.
+- Added interactive Processing Savings Calculator on homepage and full Payments page.
+  - Illustrative fees: up to 4% of monthly processing volume.
+  - Illustrative potential savings: up to 99% of estimated fees.
+- Added interactive Eagle Vision Ecosystem Savings Calculator on homepage and full Payments page.
+  - Under $10K: $250 upfront + $10/mo.
+  - $10K–$19,999: $500 upfront + $25/mo.
+  - $20K–$39,999: $1,000 upfront + $50/mo.
+  - $40K–$74,999: $1,500 upfront + $75/mo.
+  - $75K–$100K: $2,000 upfront + $100/mo.
+  - Over $100K: custom quote.
+- Result language uses “off your qualifying project upfront” and “off your qualifying platform.”
+- Processing slider milestones: $3K through $1M/month, weighted toward sub-$100K businesses.
+- Added prominent compliance/illustrative-estimate language.
