@@ -3,7 +3,7 @@ if(toggle){toggle.addEventListener('click',()=>{const open=nav.classList.toggle(
 document.querySelectorAll('.main-nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 const observer=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.getElementById('year').textContent=new Date().getFullYear();
+const yearEl=document.getElementById('year');if(yearEl){yearEl.textContent=new Date().getFullYear();}
 
 
 /* =========================================================

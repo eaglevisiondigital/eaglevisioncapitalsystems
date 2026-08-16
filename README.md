@@ -79,3 +79,9 @@ No public street or home address is included.
 - Result language uses “off your qualifying project upfront” and “off your qualifying platform.”
 - Processing slider milestones: $3K through $1M/month, weighted toward sub-$100K businesses.
 - Added prominent compliance/illustrative-estimate language.
+
+## V23 — Payments Page Calculator Fix
+- Fixed a shared JavaScript initialization error on payments.html.
+- The script previously assumed an element with id="year" existed on every page.
+- payments.html does not contain that element, so JavaScript stopped before the calculator listeners were attached.
+- The year update is now null-safe, allowing both Payments-page sliders and calculated values to update normally.
