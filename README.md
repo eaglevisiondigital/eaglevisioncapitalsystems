@@ -107,3 +107,12 @@ No public street or home address is included.
 - Increased separation between the three payment capability bands for clearer grouping.
 - Rebuilt the Eagle Vision Digital homepage feature visual into a connected website + mobile app + operations portal ecosystem with AI/automation, integrated payments, and client portal callouts.
 - Preserved all V25 calculator logic, payment visual upgrades, links, responsive behavior, and previously approved sections.
+
+## V28 — Approved Homepage Completion Pass
+- Carries forward every V27 feature and working calculator.
+- Payments: approved spacing and capability-card visual polish.
+- Propel: rebuilt as a premium connected ministry ecosystem with dashboard, app and engagement/operations callouts.
+- Business Funding: upgraded with capital visualization and use-case cards.
+- Dave Fowler Voice: upgraded with premium vintage broadcast microphone and audio-wave visual.
+- Why Eagle Vision: rebuilt with connected ecosystem graphic, three-step philosophy and proof/benefit bar.
+- Final CTA: rebuilt as a premium conversion section with stronger contact panel and visual hierarchy.
