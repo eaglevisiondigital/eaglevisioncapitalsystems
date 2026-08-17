@@ -101,3 +101,9 @@ No public street or home address is included.
 - Replaced generic EV letter badges in dashboard, phone and POS mockups with the approved Eagle Vision EV/orbit icon extracted from the approved corporate logo asset.
 - Added Point of Sale as a third visual callout alongside E-Commerce and Integrated Payments.
 - Preserved all V24 calculator functionality and final nonlinear slider UX.
+
+## V26 update
+- Polished the six Eagle Vision Payments capability cards with icon/number badges, hover depth, subtle glow, and a highlighted processing-cost card.
+- Increased separation between the three payment capability bands for clearer grouping.
+- Rebuilt the Eagle Vision Digital homepage feature visual into a connected website + mobile app + operations portal ecosystem with AI/automation, integrated payments, and client portal callouts.
+- Preserved all V25 calculator logic, payment visual upgrades, links, responsive behavior, and previously approved sections.
