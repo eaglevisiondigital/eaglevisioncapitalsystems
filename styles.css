@@ -2824,3 +2824,79 @@ body{background:#f7f9fc;color:var(--text)}
 @media(max-width:480px){
   .propel-premium-visual{transform:scale(.73);width:132%;margin-left:-16%;margin-bottom:-115px}.funding-use{width:46%;padding:11px}.capital-card{left:12%;width:76%}.voice-premium-card{gap:18px}.about-proof-bar{grid-template-columns:1fr}.contact-premium-card{padding:30px 20px}.contact-premium-panel{padding:18px}.contact-premium-copy h2{font-size:44px}
 }
+
+/* =========================================================
+   V29 — Homepage calculator pair alignment polish
+   Keep both calculators on the exact same visual rhythm.
+   ========================================================= */
+@media (min-width:1051px){
+  .evp-home-calculators{
+    align-items:stretch;
+  }
+
+  .evp-home-calculators .ev-calc-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+
+  /* The right calculator has a two-line title; reserve the same
+     header footprint on both cards so every section below aligns. */
+  .evp-home-calculators .calc-card-head{
+    min-height:78px;
+  }
+
+  .evp-home-calculators .calc-slider-block{
+    margin-top:18px;
+  }
+
+  .evp-home-calculators .calc-results.three{
+    min-height:138px;
+  }
+
+  .evp-home-calculators .calc-results>div{
+    height:100%;
+  }
+
+  /* Push the divider + CTA to the exact same baseline in both cards. */
+  .evp-home-calculators .calc-cta-zone{
+    margin-top:auto;
+    min-height:78px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(330px,52%);
+    align-items:center;
+    column-gap:18px;
+    padding-top:18px;
+  }
+
+  .evp-home-calculators .calc-cta-hint{
+    display:flex;
+    align-items:center;
+    min-height:44px;
+  }
+
+  .evp-home-calculators .calc-link.calc-link-button{
+    width:100%;
+    min-height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 18px;
+    text-align:center;
+    white-space:nowrap;
+  }
+}
+
+@media (max-width:1180px) and (min-width:1051px){
+  .evp-home-calculators .calc-cta-zone{
+    grid-template-columns:1fr;
+    row-gap:10px;
+    min-height:116px;
+  }
+  .evp-home-calculators .calc-cta-hint{
+    min-height:auto;
+  }
+  .evp-home-calculators .calc-link.calc-link-button{
+    width:100%;
+  }
+}

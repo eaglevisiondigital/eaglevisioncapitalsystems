@@ -116,3 +116,10 @@ No public street or home address is included.
 - Dave Fowler Voice: upgraded with premium vintage broadcast microphone and audio-wave visual.
 - Why Eagle Vision: rebuilt with connected ecosystem graphic, three-step philosophy and proof/benefit bar.
 - Final CTA: rebuilt as a premium conversion section with stronger contact panel and visual hierarchy.
+
+## V29 — Homepage Calculator Alignment Polish
+- Matched the two homepage calculator cards to the same internal vertical rhythm.
+- Reserved equal header height so the sliders, results blocks, divider and CTA rows align side-by-side.
+- Anchored both CTA rows to the bottom of their cards.
+- Standardized CTA button height and desktop width treatment so the calculators read as one intentionally designed pair.
+- Preserved all V28 functionality, calculator math, nonlinear milestones and selected-volume handoff.
