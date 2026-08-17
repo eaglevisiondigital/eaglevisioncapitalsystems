@@ -262,10 +262,19 @@
             <h2>Get paid anywhere.<br><em>Keep more of what you earn.</em></h2>
             <p class="evp-home-lead">From a contractor accepting payment on a phone to a multi-location restaurant, e-commerce store, membership platform or custom app, Eagle Vision Payments helps businesses accept payments wherever business happens—and connect those payments to the technology around them.</p>
 
-            <div class="evp-use-tags">
-              <span>Retail</span><span>Restaurants</span><span>Mobile</span><span>E-Commerce</span>
-              <span>Invoices</span><span>Subscriptions</span><span>Online Courses</span><span>Memberships</span>
-              <span>Apps</span><span>Websites</span><span>Custom Platforms</span><span>ACH / eCheck</span>
+            <div class="evp-capability-bands" aria-label="Payment capabilities">
+              <div class="evp-capability-band">
+                <span class="band-icon">↗</span>
+                <div><strong>ACCEPT PAYMENTS</strong><p>In-Store · Mobile · Online · Invoices · ACH / eCheck</p></div>
+              </div>
+              <div class="evp-capability-band">
+                <span class="band-icon">◫</span>
+                <div><strong>POWER DIGITAL COMMERCE</strong><p>E-Commerce · Subscriptions · Memberships · Online Courses · Registrations</p></div>
+              </div>
+              <div class="evp-capability-band">
+                <span class="band-icon">⌁</span>
+                <div><strong>CONNECT YOUR ECOSYSTEM</strong><p>Websites · Apps · Custom Platforms · Recurring Payments · Integrated Payments</p></div>
+              </div>
             </div>
 
             <div class="evp-home-actions">
@@ -275,21 +284,32 @@
           </div>
 
           <div class="evp-visual-stage" aria-label="Eagle Vision payment technology">
-            <div class="evp-dashboard-mock">
-              <div class="mock-top"><span class="ev-mini-logo">EV</span><b>EAGLE VISION PAYMENTS</b><i></i></div>
+            <div class="evp-dashboard-mock upgraded">
+              <div class="mock-top">
+                <img class="ev-brand-icon" src="assets/eagle-vision-ev-icon-transparent.png" alt="">
+                <b>EAGLE VISION PAYMENTS</b><i></i>
+              </div>
               <div class="mock-kpis"><span><small>TODAY</small><strong>$8,420</strong></span><span><small>TRANSACTIONS</small><strong>184</strong></span><span><small>AVG. TICKET</small><strong>$45.76</strong></span></div>
-              <div class="mock-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="mock-bottom"><span>Sales</span><span>Deposits</span><span>Customers</span><span>Reports</span></div>
+              <div class="mock-section-label"><strong>Sales Overview</strong><span>Last 7 days</span></div>
+              <div class="mock-revenue-chart"><svg viewBox="0 0 520 130" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="evFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#168cff" stop-opacity=".28"/><stop offset="1" stop-color="#168cff" stop-opacity="0"/></linearGradient></defs><path d="M0 108 C52 98 66 84 104 89 S165 66 204 73 S274 48 311 57 S372 31 409 40 S468 17 520 24 L520 130 L0 130 Z" fill="url(#evFill)"/><path d="M0 108 C52 98 66 84 104 89 S165 66 204 73 S274 48 311 57 S372 31 409 40 S468 17 520 24" fill="none" stroke="#168cff" stroke-width="4" stroke-linecap="round"/></svg><div class="chart-days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div></div>
+              <div class="mock-secondary-kpis"><span><small>NET DEPOSITS</small><strong>$7,965</strong></span><span><small>SUCCESSFUL</small><strong>96.8%</strong></span><span><small>FEES SAVED*</small><strong>$453</strong></span></div>
+              <div class="mock-transactions">
+                <div class="transactions-head"><strong>Recent Transactions</strong><span>View all</span></div>
+                <div><span>Restaurant Order</span><b>$86.42</b></div>
+                <div><span>Online Course</span><b>$129.00</b></div>
+                <div><span>Service Invoice</span><b>$475.00</b></div>
+                <div><span>Membership</span><b>$49.00</b></div>
+              </div>
             </div>
 
             <div class="evp-pos-mock">
-              <div class="pos-screen"><span class="ev-mini-logo">EV</span><strong>$86.42</strong><small>Tap, insert or swipe</small><div class="tap-ring">)))</div></div>
+              <div class="pos-screen"><img class="ev-brand-icon terminal" src="assets/eagle-vision-ev-icon-transparent.png" alt=""><strong>$86.42</strong><small>Tap, insert or swipe</small><div class="tap-ring">)))</div></div>
               <div class="pos-base"></div>
             </div>
 
             <div class="evp-phone-mock">
               <div class="phone-notch"></div>
-              <span class="ev-mini-logo">EV</span>
+              <img class="ev-brand-icon phone-icon" src="assets/eagle-vision-ev-icon-transparent.png" alt="">
               <small>CHECKOUT</small>
               <strong>$129.00</strong>
               <button>PAY NOW</button>
@@ -297,6 +317,7 @@
 
             <div class="evp-commerce-chip">E-COMMERCE</div>
             <div class="evp-integrated-chip">INTEGRATED PAYMENTS</div>
+            <div class="evp-pos-chip">POINT OF SALE</div>
           </div>
 
           <div class="evp-capability-grid">
@@ -325,15 +346,15 @@
             </div>
             <div class="calc-slider-block">
               <label>Monthly processing volume <strong data-volume-label>$25,000</strong></label>
-              <input type="range" min="0" max="15" step="1" value="5" data-volume-slider aria-label="Monthly processing volume">
-              <div class="slider-range-labels"><span>$3K</span><span>$100K</span><span>$1M</span></div>
+              <input type="range" min="0" max="9" step="1" value="3" data-volume-slider aria-label="Monthly processing volume">
+              <div class="slider-range-labels nonlinear"><span>$3K</span><span>$5K</span><span>$10K</span><span>$25K</span><span>$40K</span><span>$60K</span><span>$100K</span><span>$200K</span><span>$500K</span><span>$1M</span></div>
             </div>
             <div class="calc-results three">
               <div><small>EST. FEES AT UP TO 4%</small><strong data-est-fees>$1,000</strong><span>/ month</span></div>
               <div class="highlight"><small>POTENTIAL SAVINGS UP TO</small><strong data-monthly-save>$990</strong><span>/ month</span></div>
               <div><small>POTENTIAL ANNUAL SAVINGS</small><strong data-annual-save>$11,880</strong><span>/ year</span></div>
             </div>
-            <a href="payments.html#processing-calculator" class="calc-link">Explore My Processing Savings →</a>
+            <div class="calc-cta-zone"><span class="calc-cta-hint">Want the full breakdown? <b>↘</b></span><a href="payments.html#processing-calculator" class="calc-link calc-link-button" data-preserve-volume="processing">Calculate My Processing Savings →</a></div>
           </article>
 
           <article class="ev-calc-card ev-calc-ecosystem reveal" data-ecosystem-calc>
@@ -343,8 +364,8 @@
             </div>
             <div class="calc-slider-block">
               <label>Monthly processing volume <strong data-volume-label>$25,000</strong></label>
-              <input type="range" min="0" max="15" step="1" value="5" data-volume-slider aria-label="Monthly processing volume">
-              <div class="slider-range-labels"><span>$3K</span><span>$100K</span><span>$1M</span></div>
+              <input type="range" min="0" max="9" step="1" value="3" data-volume-slider aria-label="Monthly processing volume">
+              <div class="slider-range-labels nonlinear"><span>$3K</span><span>$5K</span><span>$10K</span><span>$25K</span><span>$40K</span><span>$60K</span><span>$100K</span><span>$200K</span><span>$500K</span><span>$1M</span></div>
             </div>
             <div class="calc-results three ecosystem-results">
               <div><small>QUALIFYING PROJECT UPFRONT</small><strong data-upfront-save>$1,000</strong><span>off</span></div>
@@ -352,7 +373,7 @@
               <div><small>FIRST-YEAR TECH SAVINGS</small><strong data-firstyear-save>$1,600</strong><span>potential savings</span></div>
             </div>
             <div class="custom-quote-note" data-custom-note hidden>Processing over $100,000/month? Your project may qualify for a custom Eagle Vision discount package.</div>
-            <a href="payments.html#ecosystem-calculator" class="calc-link">Calculate My Eagle Vision Advantage →</a>
+            <div class="calc-cta-zone"><span class="calc-cta-hint">See your exact Eagle Vision discount. <b>↘</b></span><a href="payments.html#ecosystem-calculator" class="calc-link calc-link-button" data-preserve-volume="ecosystem">Calculate My Eagle Vision Advantage →</a></div>
           </article>
         </div>
 

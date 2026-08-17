@@ -10,10 +10,7 @@ const yearEl=document.getElementById('year');if(yearEl){yearEl.textContent=new D
    V22 — Eagle Vision savings calculators
    ========================================================= */
 (() => {
-  const volumeMilestones = [
-    3000, 5000, 10000, 15000, 20000, 25000, 40000, 50000,
-    75000, 100000, 150000, 200000, 400000, 500000, 750000, 1000000
-  ];
+  const volumeMilestones = [3000, 5000, 10000, 25000, 40000, 60000, 100000, 200000, 500000, 1000000];
 
   const money = (n) => new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -82,4 +79,47 @@ const yearEl=document.getElementById('year');if(yearEl){yearEl.textContent=new D
     slider.addEventListener('input', update);
     update();
   });
+})();
+
+
+/* =========================================================
+   V24 — Preserve selected calculator volume on click-through
+   and initialize Payments-page calculators from ?volume=
+   ========================================================= */
+(() => {
+  const volumeMilestonesV24 = [3000, 5000, 10000, 25000, 40000, 60000, 100000, 200000, 500000, 1000000];
+
+  const closestIndex = (value) => {
+    let best = 0;
+    let diff = Infinity;
+    volumeMilestonesV24.forEach((v, i) => {
+      const d = Math.abs(v - value);
+      if (d < diff) { diff = d; best = i; }
+    });
+    return best;
+  };
+
+  document.querySelectorAll('[data-preserve-volume]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const type = link.getAttribute('data-preserve-volume');
+      const card = link.closest(type === 'processing' ? '[data-processing-calc]' : '[data-ecosystem-calc]');
+      const slider = card && card.querySelector('[data-volume-slider]');
+      if (!slider) return;
+
+      const selected = volumeMilestonesV24[Number(slider.value)] || 25000;
+      const href = new URL(link.getAttribute('href'), window.location.href);
+      href.searchParams.set('volume', selected);
+      link.setAttribute('href', href.pathname + href.search + href.hash);
+    }, { passive: true });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const requestedVolume = Number(params.get('volume'));
+  if (requestedVolume > 0) {
+    const idx = closestIndex(requestedVolume);
+    document.querySelectorAll('[data-volume-slider]').forEach(slider => {
+      slider.value = idx;
+      slider.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  }
 })();

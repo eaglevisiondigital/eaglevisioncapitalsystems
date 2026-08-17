@@ -85,3 +85,19 @@ No public street or home address is included.
 - The script previously assumed an element with id="year" existed on every page.
 - payments.html does not contain that element, so JavaScript stopped before the calculator listeners were attached.
 - The year update is now null-safe, allowing both Payments-page sliders and calculated values to update normally.
+
+## V24 — Final Calculator UX
+- Preserved both homepage calculators as compact interactive side-by-side tools.
+- Changed the slider to a nonlinear milestone sequence focused heavily below $100K:
+  $3K, $5K, $10K, $25K, $40K, $60K, $100K, $200K, $500K, $1M.
+- Retained the $1M ceiling while giving much more slider resolution to typical sub-$100K clients.
+- Strengthened both homepage calculator CTAs with visible action zones and directional cues.
+- Selected monthly volume now carries through to the corresponding full calculator on payments.html via URL query parameter.
+- Full Payments-page calculators initialize to the selected homepage volume.
+
+## V25 — Homepage Payments Visual Upgrade
+- Replaced the loose use-case pill cloud with three organized capability bands: Accept Payments, Power Digital Commerce, Connect Your Ecosystem.
+- Upgraded the payment dashboard mockup to use the space with a 7-day sales chart, net deposits, successful payment rate, fee-savings metric, and recent transactions across multiple business types.
+- Replaced generic EV letter badges in dashboard, phone and POS mockups with the approved Eagle Vision EV/orbit icon extracted from the approved corporate logo asset.
+- Added Point of Sale as a third visual callout alongside E-Commerce and Integrated Payments.
+- Preserved all V24 calculator functionality and final nonlinear slider UX.
