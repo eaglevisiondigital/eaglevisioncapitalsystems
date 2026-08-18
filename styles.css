@@ -3270,3 +3270,93 @@ body{background:#f7f9fc;color:var(--text)}
 @media(max-width:640px){
   #propel .propel-ecosystem-approved{left:-7%;width:114%}
 }
+
+/* =========================================================
+   V38 — LOCKED PROPEL HERO ASSET + ABOUT PROOF BAR REPAIR
+   Uses the user-supplied ministry ecosystem artwork as one
+   complete transparent asset. No recreation, crop or overlays.
+   ========================================================= */
+#propel .propel-brand-lockup{gap:0}
+#propel .propel-brand-lockup span{display:none!important}
+#propel .propel-brand-lockup img{
+  width:214px;
+  max-width:100%;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain;
+  object-position:left center;
+  overflow:visible;
+}
+#propel .propel-premium-card{
+  grid-template-columns:minmax(360px,.82fr) minmax(0,1.28fr);
+  gap:26px;
+}
+#propel .propel-premium-visual-v38{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:560px;
+  width:100%;
+  overflow:visible;
+}
+#propel .propel-ecosystem-user-approved-v38{
+  display:block;
+  width:112%;
+  max-width:none;
+  height:auto!important;
+  object-fit:contain;
+  object-position:center;
+  transform:none!important;
+  filter:drop-shadow(0 22px 30px rgba(0,0,0,.20));
+}
+@media(max-width:1180px){
+  #propel .propel-premium-card{grid-template-columns:36% 64%;gap:18px;padding:48px 34px 42px}
+  #propel .propel-ecosystem-user-approved-v38{width:116%}
+}
+@media(max-width:900px){
+  #propel .propel-premium-card{grid-template-columns:1fr;gap:22px}
+  #propel .propel-premium-copy{max-width:760px}
+  #propel .propel-premium-visual-v38{min-height:0;margin-top:4px}
+  #propel .propel-ecosystem-user-approved-v38{width:108%;margin-left:-4%}
+}
+@media(max-width:560px){
+  #propel .propel-brand-lockup img{width:190px}
+  #propel .propel-ecosystem-user-approved-v38{width:116%;margin-left:-8%}
+}
+
+/* Approved Why Eagle Vision proof strip: shorter, stronger icons, no circles. */
+.about-proof-bar-v35{
+  min-height:0!important;
+  border-radius:18px!important;
+  box-shadow:0 14px 34px rgba(15,104,190,.20)!important;
+}
+.about-proof-bar-v35>span{
+  min-height:88px!important;
+  padding:15px 28px!important;
+  gap:22px!important;
+  background:linear-gradient(105deg,#188df7 0%,#0c69ce 100%)!important;
+}
+.about-proof-bar-v35 .proof-icon{
+  width:62px!important;
+  height:62px!important;
+  flex:0 0 62px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.about-proof-bar-v35 .proof-icon svg{
+  width:58px!important;
+  height:58px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+}
+.about-proof-bar-v35 .proof-copy b{font-size:17px!important;letter-spacing:.02em!important}
+.about-proof-bar-v35 .proof-copy small{font-size:11px!important;color:#e7f4ff!important}
+@media(max-width:1100px){
+  .about-proof-bar-v35>span{padding:14px 18px!important;gap:14px!important}
+  .about-proof-bar-v35 .proof-icon{width:50px!important;height:50px!important;flex-basis:50px!important}
+  .about-proof-bar-v35 .proof-icon svg{width:48px!important;height:48px!important}
+}

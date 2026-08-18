@@ -141,3 +141,10 @@ No public street or home address is included.
 - Why Eagle Vision connected-ecosystem hero now uses PNG transparency.
 - Propel section keeps the approved dark-green section structure/copy/CTA and replaces the device visual with the approved complete ministry ecosystem composite, converted to transparent PNG; no extra logo dash overlay.
 - Responsive rules added for the new Propel composite.
+
+V38 cumulative update:
+- Replaced the Propel right-side visual with the user-supplied approved ministry ecosystem artwork as one complete transparent PNG.
+- Removed the extra green dash after the Propel logo and retained the complete approved Propel by Eagle Vision lockup.
+- Removed duplicate decorative callouts/circuit overlays from the Propel image area so the supplied hero artwork is displayed intact.
+- Refined the Why Eagle Vision blue proof strip to match the approved shorter mockup with larger white icons and tighter alignment.
+- Carries forward all V37 files and fixes, including transparent Payments and Eagle Vision ecosystem hero assets.
