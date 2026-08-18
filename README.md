@@ -135,3 +135,9 @@ No public street or home address is included.
 - Replaced the Payments page hero visualization with the user-approved supplied hero artwork.
 - Rebuilt Secure / Fast / Integrated / Supported details and the ACCEPT / CONNECT / OPTIMIZE / GROW blue strip in responsive HTML/CSS.
 - Preserved V35 approved ecosystem artwork and all prior production files.
+
+## v37 cumulative hero corrections — 2026-08-18
+- Payments hero now uses PNG transparency so the page's blue/white treatment shows through; no white image rectangle.
+- Why Eagle Vision connected-ecosystem hero now uses PNG transparency.
+- Propel section keeps the approved dark-green section structure/copy/CTA and replaces the device visual with the approved complete ministry ecosystem composite, converted to transparent PNG; no extra logo dash overlay.
+- Responsive rules added for the new Propel composite.

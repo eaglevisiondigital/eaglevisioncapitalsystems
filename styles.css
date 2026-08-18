@@ -3253,3 +3253,20 @@ body{background:#f7f9fc;color:var(--text)}
   .payments-approved-proof article:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.28)}
   .payments-approved-tagline{font-size:1.15rem}
 }
+
+/* v37 cumulative approved hero corrections — 2026-08-18 */
+#propel .propel-ecosystem-approved{
+  position:absolute;z-index:4;left:-2%;top:-8px;width:108%;height:auto;max-width:none;
+  object-fit:contain;filter:drop-shadow(0 22px 34px rgba(0,0,0,.20));
+}
+#propel .propel-premium-visual .propel-circuit,
+#propel .propel-premium-visual .propel-float-group{display:none}
+#about .about-ecosystem-approved img{background:transparent}
+.payments-hero-visual img{background:transparent}
+@media(max-width:980px){
+  #propel .propel-ecosystem-approved{position:relative;left:-4%;top:0;width:108%;margin:0 auto}
+  #propel .propel-premium-visual{min-height:auto!important;transform:none!important;width:100%!important;margin:0!important}
+}
+@media(max-width:640px){
+  #propel .propel-ecosystem-approved{left:-7%;width:114%}
+}
