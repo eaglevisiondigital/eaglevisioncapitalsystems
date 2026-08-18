@@ -123,3 +123,9 @@ No public street or home address is included.
 - Anchored both CTA rows to the bottom of their cards.
 - Standardized CTA button height and desktop width treatment so the calculators read as one intentionally designed pair.
 - Preserved all V28 functionality, calculator math, nonlinear milestones and selected-volume handoff.
+
+## V35 — Approved Eagle Vision Ecosystem Artwork + Proof Bar
+- Replaced the reconstructed white Eagle Vision ecosystem illustration with the user's supplied approved artwork file, used directly as an image asset without recreation.
+- Enlarged the approved artwork in the white “Why Eagle Vision” section and preserved its intrinsic proportions.
+- Rebuilt the lower blue proof strip with white icons and the approved ONE / CONNECTED / RIGHT-SIZED / BUILT TO GROW labels.
+- All V34 Payments flagship hero work and all previous approved production content remain included.
