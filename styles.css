@@ -3008,3 +3008,33 @@ body{background:#f7f9fc;color:var(--text)}
   #propel .propel-mobile-approved{right:-2%;top:85px;width:28%;height:auto !important}
   #propel .propel-circuit{display:none}
 }
+
+/* V31 — approved Propel composition repair.
+   Keep the approved landscape layout intact on tablet/retina desktop widths;
+   only stack on true mobile. Device art always preserves source aspect ratio. */
+#propel .propel-brand-lockup img{
+  width:198px;
+  height:auto !important;
+  max-height:none;
+  object-fit:contain;
+  object-position:left center;
+}
+@media (min-width:761px) and (max-width:1100px){
+  #propel .propel-premium-card{
+    grid-template-columns:38% 62%;
+    align-items:center;
+    gap:16px;
+    min-height:610px;
+    padding:44px 34px 40px;
+  }
+  #propel .propel-premium-copy{max-width:none}
+  #propel .propel-premium-copy h2{font-size:clamp(43px,5.8vw,60px)}
+  #propel .propel-premium-copy>p{font-size:14px;line-height:1.6;margin:20px 0 17px}
+  #propel .propel-mini-pills{margin-bottom:22px}
+  #propel .propel-premium-visual{min-height:500px;margin-top:0}
+  #propel .propel-laptop-approved{left:-5%;top:58px;width:84%;height:auto !important;object-fit:contain}
+  #propel .propel-mobile-approved{right:0;top:112px;width:24.5%;height:auto !important;object-fit:contain;transform:none !important}
+  #propel .pf-one{right:2%;top:65px}
+  #propel .pf-two{left:7%;bottom:38px}
+  #propel .pf-three{right:1%;bottom:18px}
+}
