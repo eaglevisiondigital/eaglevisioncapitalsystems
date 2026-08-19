@@ -123,3 +123,36 @@ const yearEl=document.getElementById('year');if(yearEl){yearEl.textContent=new D
     });
   }
 })();
+
+/* =========================================================
+   V57 — fixed-header anchor correction on mobile
+   Ensures same-page sections never land underneath the header.
+   ========================================================= */
+(() => {
+  const mobile = () => window.matchMedia('(max-width: 640px)').matches;
+  const headerOffset = () => {
+    const h = document.querySelector('.site-header');
+    return (h ? h.getBoundingClientRect().height : 82) + 28;
+  };
+  const scrollToHash = (hash, smooth = false) => {
+    if (!mobile() || !hash || hash === '#top') return;
+    let el;
+    try { el = document.querySelector(hash); } catch (_) { return; }
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - headerOffset();
+    window.scrollTo({ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' });
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    if (location.hash) setTimeout(() => scrollToHash(location.hash, false), 90);
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const hash = a.getAttribute('href');
+      if (!mobile() || !hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+      e.preventDefault();
+      history.pushState(null, '', hash);
+      scrollToHash(hash, true);
+    }));
+  });
+  window.addEventListener('hashchange', () => setTimeout(() => scrollToHash(location.hash, false), 20));
+})();

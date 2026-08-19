@@ -3450,3 +3450,492 @@ body{background:#f7f9fc;color:var(--text)}
 .at54-case-features p{margin:0;color:#1f2d3a;font-size:14px;line-height:1.55;max-width:760px}
 @media(max-width:980px){.at51-case{grid-template-columns:1fr}.at54-case-features{padding:28px 38px}.at51-case-copy{padding:44px 38px}}
 @media(max-width:640px){.at54-case-features{padding:20px 26px}.at54-case-features article{grid-template-columns:48px 1fr;gap:13px}.at54-case-features i{width:44px;height:44px;font-size:19px}.at54-case-features h4{font-size:17px}.at54-case-features p{font-size:13px}.at51-case-copy{padding:32px 26px}}
+
+/* =========================================================
+   V55 — MOBILE-ONLY READABILITY + COMPOSITION PASS
+   Approved desktop layouts are intentionally untouched.
+   ========================================================= */
+@media (max-width:640px){
+  /* Global mobile rhythm/readability */
+  .container{width:calc(100% - 36px)}
+
+  /* 1 — Main ecosystem / solution choices: compose for phone, don't compress */
+  .corporate-ecosystem{padding-top:54px;padding-bottom:62px}
+  .corporate-ecosystem .section-heading{margin-bottom:26px}
+  .ecosystem-pillars{grid-template-columns:1fr;border-radius:24px;overflow:hidden}
+  .pillar,
+  .pillar:nth-child(3),
+  .pillar:nth-child(2n),
+  .pillar:nth-child(-n+4){
+    min-height:0;
+    padding:28px 24px 26px;
+    border-right:0;
+    border-bottom:1px solid rgba(16,55,91,.09);
+    text-align:left;
+    align-items:flex-start;
+  }
+  .pillar:last-child{border-bottom:0}
+  .pillar .pillar-icon{margin-bottom:17px}
+  .pillar small{font-size:.72rem;letter-spacing:.17em;margin-bottom:8px}
+  .pillar h3{font-size:1.45rem;line-height:1.12;margin-bottom:10px}
+  .pillar p{font-size:1rem;line-height:1.58;max-width:31rem;color:#536d84}
+  .pillar b{margin-top:17px;font-size:1.75rem}
+
+  /* 2–3 — Payments hero: stronger mobile contrast + intentionally larger visual */
+  .evp-home{padding:38px 0 54px}
+  .evp-home-shell{padding:30px 22px 28px;border-radius:28px;gap:25px}
+  .evp-home-copy .feature-kicker{font-size:.74rem;color:#8fd0ff}
+  .evp-home-copy h2{font-size:clamp(2.75rem,12vw,3.55rem);line-height:.96;margin:10px 0 18px}
+  .evp-home-lead{font-size:1.04rem;line-height:1.67;color:#e2eef9}
+  .evp-capability-band strong{font-size:.70rem;color:#93d2ff}
+  .evp-capability-band p{font-size:.82rem;line-height:1.42;color:#e2edf7}
+  .evp-capability-band{padding:12px 12px;border-color:rgba(255,255,255,.19);background:rgba(255,255,255,.07)}
+  .evp-home-actions{gap:10px}
+  .evp-home-actions .btn{min-height:51px;font-size:.91rem}
+  .evp-visual-stage{
+    min-height:425px;
+    width:114%;
+    margin-left:-7%;
+    margin-bottom:-28px;
+    transform:scale(.88);
+    transform-origin:center top;
+  }
+  .evp-integrated-chip{background:rgba(4,27,53,.94);border-color:rgba(116,200,255,.45);font-size:.66rem;padding:9px 12px}
+  .evp-commerce-chip{font-size:.62rem}
+
+  /* 4 — Calculator slider: show only useful mobile milestones */
+  .evp-calculator-intro{margin:48px 0 20px;gap:14px}
+  .evp-calculator-intro h2{font-size:2.55rem;line-height:1.02}
+  .evp-calculator-intro p{font-size:1rem;line-height:1.62;color:#536d84}
+  .ev-calc-card{padding:22px 18px;border-radius:22px}
+  .calc-card-head{gap:12px}
+  .calc-card-head h3{font-size:1.33rem;line-height:1.2}
+  .calc-card-head small{font-size:.68rem}
+  .calc-slider-block{margin-top:20px;padding:20px 16px;border-radius:18px}
+  .calc-slider-block label{align-items:flex-end;font-size:1rem;line-height:1.25}
+  .calc-slider-block label strong{font-size:1.55rem;line-height:1;color:#0b75e5}
+  .calc-slider-block input[type=range]{margin:21px 0 10px}
+  .slider-range-labels.nonlinear,
+  .slider-milestones.nonlinear{grid-template-columns:repeat(5,1fr);row-gap:0;margin-top:8px}
+  .slider-range-labels.nonlinear span,
+  .slider-milestones.nonlinear span{display:none;font-size:.68rem;color:#72889d;font-weight:850}
+  .slider-range-labels.nonlinear span:nth-child(1),
+  .slider-range-labels.nonlinear span:nth-child(4),
+  .slider-range-labels.nonlinear span:nth-child(7),
+  .slider-range-labels.nonlinear span:nth-child(9),
+  .slider-range-labels.nonlinear span:nth-child(10),
+  .slider-milestones.nonlinear span:nth-child(1),
+  .slider-milestones.nonlinear span:nth-child(4),
+  .slider-milestones.nonlinear span:nth-child(7),
+  .slider-milestones.nonlinear span:nth-child(9),
+  .slider-milestones.nonlinear span:nth-child(10){display:block}
+  .slider-range-labels.nonlinear span:nth-child(4),
+  .slider-range-labels.nonlinear span:nth-child(7),
+  .slider-range-labels.nonlinear span:nth-child(9),
+  .slider-milestones.nonlinear span:nth-child(4),
+  .slider-milestones.nonlinear span:nth-child(7),
+  .slider-milestones.nonlinear span:nth-child(9){text-align:center}
+  .calc-results{gap:12px;margin-top:16px}
+  .calc-results>div{padding:20px 18px;border-radius:18px}
+  .calc-results small{min-height:0;font-size:.70rem;line-height:1.35;color:#617b92}
+  .calc-results strong{font-size:2.05rem;margin-top:12px}
+  .calc-results span{font-size:.93rem;color:#72889d}
+  .calc-results>div.highlight{background:linear-gradient(145deg,#1593ff,#0758ba);box-shadow:0 14px 28px rgba(13,112,218,.18)}
+  .calc-results .highlight small,.calc-results .highlight span{color:#e5f3ff}
+  .calc-cta-zone{gap:12px;margin-top:20px;padding-top:18px}
+  .calc-cta-hint{font-size:.93rem;color:#617a91}
+  .calc-link.calc-link-button{min-height:52px;padding:14px 15px;font-size:.94rem;text-align:center}
+
+  /* 5–7 — calculator/result cards: make result hierarchy unmistakable */
+  .ev-calc-processing .calc-results>div,
+  .ev-calc-ecosystem .calc-results>div{min-height:138px;display:flex;flex-direction:column;justify-content:center}
+  .ev-calc-processing .calc-results .highlight strong,
+  .ev-calc-ecosystem .calc-results .highlight strong{font-size:2.25rem}
+
+  /* 8 — Digital + Payments cross-sell card: less dead space, tighter hierarchy */
+  .evp-home-bottom-callout{margin-top:20px;padding:22px 20px;border-radius:22px;gap:13px}
+  .evp-bottom-mark{width:50px;height:50px;border-radius:15px;font-size:1.05rem}
+  .evp-home-bottom-callout small{font-size:.70rem;line-height:1.35}
+  .evp-home-bottom-callout h3{font-size:1.5rem;line-height:1.16;margin:6px 0 8px}
+  .evp-home-bottom-callout p{font-size:1rem;line-height:1.55;color:#536d84}
+  .evp-home-bottom-callout .btn{width:100%;min-height:52px;margin-top:3px;font-size:.95rem}
+
+  /* 9 — Eagle Vision Digital dark section: correct muted mobile contrast */
+  .ecosystem-section{padding-top:66px;padding-bottom:66px}
+  .ecosystem-card{border-radius:26px;min-height:0}
+  .ecosystem-copy{padding:36px 24px 30px}
+  .ecosystem-copy .eyebrow{color:#8ed0ff}
+  .ecosystem-copy h2{font-size:2.75rem;line-height:1.01}
+  .ecosystem-copy p{font-size:1.05rem;line-height:1.7;color:#e2edf7}
+  .ecosystem-copy .service-pills{gap:9px;margin:24px 0 28px}
+  .ecosystem-copy .service-pills span{padding:10px 12px;font-size:.84rem;color:#edf7ff;background:rgba(255,255,255,.09);border-color:rgba(151,211,255,.22)}
+  .ecosystem-copy .service-pills i{color:#75c5ff}
+  .digital-cta{width:100%;min-height:54px;font-size:1rem}
+
+  /* 10 — Connected ecosystem visual: preserve size, add safe breathing room and prevent clipping */
+  .digital-ecosystem-art{
+    min-height:560px;
+    margin:0 12px 14px;
+    width:auto;
+    border-radius:22px;
+    overflow:hidden;
+    background:radial-gradient(circle at 47% 46%,rgba(32,148,255,.21),transparent 45%);
+  }
+  .digital-art-label{top:28px;font-size:.70rem;letter-spacing:.16em}
+  .digital-browser{left:1%;top:83px;width:77%;height:305px}
+  .digital-phone{right:0;top:121px;width:33%;height:318px}
+  .digital-portal{left:3%;bottom:62px;width:56%;height:154px}
+  .digital-chip{color:#eef8ff;border-color:rgba(120,201,255,.36);background:rgba(4,28,52,.94)}
+  .chip-ai{right:0;top:64px}.chip-pay{right:0;bottom:51px}
+
+  /* Fine-print contrast without making it visually dominant */
+  .evp-disclaimer{font-size:.72rem;line-height:1.6;color:#687f94;padding:0 6px}
+}
+
+@media (max-width:390px){
+  .container{width:calc(100% - 28px)}
+  .pillar{padding:25px 20px 23px}
+  .pillar h3{font-size:1.32rem}.pillar p{font-size:.96rem}
+  .evp-home-shell{padding-left:18px;padding-right:18px}
+  .evp-home-copy h2{font-size:2.7rem}
+  .evp-visual-stage{width:120%;margin-left:-10%;transform:scale(.84)}
+  .evp-calculator-intro h2{font-size:2.3rem}
+  .calc-slider-block label{display:grid;gap:6px}
+  .calc-slider-block label strong{font-size:1.45rem}
+  .ecosystem-copy{padding-left:21px;padding-right:21px}
+  .ecosystem-copy h2{font-size:2.48rem}
+  .digital-ecosystem-art{margin-left:8px;margin-right:8px;min-height:540px}
+}
+
+/* =========================================================
+   V56 — MOBILE-ONLY SECOND READABILITY + COMPOSITION PASS
+   Built from the user-supplied iPhone screenshots on 2026-08-19.
+   Desktop/tablet layouts remain untouched.
+   ========================================================= */
+@media (max-width:640px){
+  /* Fixed header: same compact experience on every page */
+  .site-header{background:rgba(255,255,255,.97);backdrop-filter:blur(16px)}
+  .nav-wrap{height:84px;gap:12px}
+  .site-header .brand{width:205px;height:58px;flex:0 1 auto}
+  .site-header .brand img{width:198px;max-height:56px}
+  .menu-toggle{display:block;flex:0 0 auto;padding:10px 13px;border-radius:10px;font-size:.9rem}
+  .main-nav{top:76px;left:18px;right:18px;gap:0;padding:10px;border-radius:18px;background:#fff;box-shadow:0 22px 55px rgba(18,58,92,.18)}
+  .main-nav a{width:100%;padding:13px 14px;border-radius:11px;color:#173248;font-size:.96rem}
+  .main-nav a:hover,.main-nav a.active{background:#eef7ff;color:#0c72d8}
+  .main-nav .nav-cta{margin-top:4px;background:linear-gradient(135deg,#168cff,#0c6fd1);color:#fff;text-align:center}
+
+  /* Fixed header / anchor safety. Prevent section titles from hiding underneath it. */
+  #solutions,#payments,#industries,#digital,#propel,#funding,#about,#contact,#payment-analysis{scroll-margin-top:112px}
+
+  /* Main home hero: the desktop-scale headline was overpowering a phone. */
+  .hero-v17{padding-top:112px}
+  .hero-v17 h1{font-size:clamp(2.85rem,12.2vw,3.65rem);line-height:.94;letter-spacing:-.055em}
+  .hero-v17 h1 em{margin-top:8px}
+  .hero-v17-kicker{font-size:.72rem;line-height:1.48;letter-spacing:.075em}
+  .hero-v17-lead{font-size:1rem;line-height:1.62;color:#536d84}
+
+  /* Business funding: stronger mobile order, spacing and visual hierarchy. */
+  .funding-premium{padding:54px 0 42px}
+  .funding-premium-card{padding:30px 21px 27px;gap:30px;border-radius:25px}
+  .funding-copy-premium .eyebrow{margin-bottom:14px}
+  .funding-copy-premium h2{font-size:2.75rem;line-height:.98;letter-spacing:-.045em}
+  .funding-copy-premium p{font-size:1rem;line-height:1.62;color:#526d84}
+  .funding-pills{gap:8px;margin:20px 0 23px}
+  .funding-pills span{font-size:.72rem;padding:9px 11px;color:#155e9b}
+  .funding-copy-premium .btn{width:100%;min-height:53px;font-size:.95rem}
+  .funding-visual{min-height:500px;margin-top:2px}
+  .funding-orbit{width:285px;height:285px;left:50%;right:auto;top:86px;transform:translateX(-50%)}
+  .capital-card{left:10%;top:155px;width:80%;padding:23px 21px;border-radius:21px;z-index:5}
+  .capital-card strong{font-size:3rem;margin-top:10px}
+  .capital-card span{font-size:.75rem;color:#e2f0fb}
+  .capital-card em{font-size:.68rem;line-height:1.4;display:block}
+  .funding-use{width:44%;padding:13px 12px;border-radius:16px;z-index:3}
+  .funding-use span{font-size:.92rem;line-height:1.15;color:#163a5c}
+  .funding-use small{font-size:.70rem;line-height:1.35;color:#6e879d}
+  .fu-one{left:0;top:22px}.fu-two{right:0;top:72px}.fu-three{left:0;bottom:10px}.fu-four{right:0;bottom:28px}
+  .fu-five{left:0!important;top:0!important;bottom:auto!important;width:49%!important;border-color:#1689ee!important;z-index:6!important}
+  .fu-five .digital-growth-list{font-size:.70rem!important;line-height:1.48!important;color:#4e6f8c!important;margin-top:8px!important}
+
+  /* Funding digital-growth capability cards: body copy had become too muted on phone. */
+  .funding-digital-investment-v45{margin-top:28px;padding:28px 20px;border-radius:24px}
+  .digital-investment-copy h3{font-size:2rem;line-height:1.08}
+  .digital-investment-copy p{font-size:.98rem;line-height:1.6;color:#dbeaf7}
+  .digital-investment-outcomes{gap:8px}
+  .digital-investment-outcomes span{font-size:.76rem;color:#e7f4ff;border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.07)}
+  .digital-investment-grid{gap:11px}
+  .digital-investment-grid article{padding:16px 14px;grid-template-columns:42px 1fr;column-gap:12px}
+  .digital-investment-grid article i{width:38px;height:38px}
+  .digital-investment-grid article b{font-size:1rem;color:#fff}
+  .digital-investment-grid article small{font-size:.79rem;line-height:1.43;color:#d1e3f2}
+  .digital-investment-note{font-size:.72rem;line-height:1.5;color:#bad0e2}
+
+  /* Dave Fowler Voice: keep the full microphone and full label visible before copy begins. */
+  .voice-premium{padding:30px 0 64px}
+  .voice-premium-card{padding:26px 21px 30px;gap:16px;border-radius:25px}
+  .voice-visual{height:360px;margin-bottom:4px;overflow:visible}
+  .vintage-mic{left:50%;top:8px;transform:translateX(-50%) scale(.94);transform-origin:top center}
+  .voice-wave{top:43%;height:88px}
+  .voice-studio-tag{left:50%!important;bottom:12px!important;transform:translateX(-50%)!important;min-width:245px;text-align:center;padding:9px 15px;font-size:.68rem;letter-spacing:.11em;background:rgba(4,24,42,.94);border-color:rgba(99,183,245,.45);z-index:7}
+  .voice-premium-copy{padding-top:2px}
+  .voice-premium-copy h2{font-size:2.55rem;line-height:1.03}
+  .voice-premium-copy p{font-size:1rem;line-height:1.62;color:#d0dfeb}
+  .voice-pills span{font-size:.76rem;color:#d9edf9;border-color:rgba(116,191,247,.28);background:rgba(255,255,255,.065)}
+  .voice-premium-copy .btn{width:100%;min-height:54px;font-size:.95rem}
+
+  /* About ecosystem: keep the graphic inside the viewport; let users actually read the surrounding copy. */
+  .about-premium{padding-top:62px}
+  .about-premium-heading h2{font-size:2.9rem;line-height:.98}
+  .about-premium-heading>p{font-size:1rem;line-height:1.62;color:#526b81}
+  .about-ecosystem-approved{width:100%;margin:0;padding:6px 0 2px;overflow:visible}
+  .about-ecosystem-approved img{width:100%;max-width:100%;transform:none!important}
+  .about-premium-bottom{padding-top:30px;margin-top:14px}
+  .about-premium-bottom .about-lead{font-size:1.18rem;line-height:1.58;color:#304b62;text-align:left;margin:0}
+  .about-steps article{grid-template-columns:52px 1fr;gap:14px;padding:19px 0}
+  .about-steps>article>span{width:45px;height:45px;font-size:.78rem;border-radius:13px}
+  .about-steps b{font-size:1.03rem;line-height:1.3}
+  .about-steps p{font-size:.92rem;line-height:1.5;color:#607a91}
+
+  /* Payments page hero: standardized phone header + less headline crowding. */
+  .payments-page-hero{padding-top:118px!important}
+  .payments-approved-hero-v36{padding-top:118px!important}
+  .payments-approved-grid{gap:20px}
+  .payments-approved-copy h1{font-size:clamp(3.05rem,13vw,3.75rem);line-height:.9;letter-spacing:-.06em}
+  .payments-approved-copy>p{font-size:1rem;line-height:1.58;color:#526d84}
+  .payments-approved-actions{gap:10px}
+  .payments-approved-actions .btn{min-height:54px;font-size:.94rem}
+  .payments-approved-confidence{gap:17px 12px}
+  .payments-approved-confidence b{font-size:.9rem}.payments-approved-confidence small{font-size:.72rem;color:#647d93}
+  .payments-approved-visual{width:108%;margin-left:-4%;margin-top:4px}
+  .payments-approved-proof article{padding:20px 18px}
+  .payments-approved-proof span{font-size:.78rem}.payments-approved-proof strong{font-size:1.05rem}.payments-approved-proof small{font-size:.78rem;color:#f3f9ff}
+  .payments-approved-tagline{font-size:1.18rem;line-height:1.35}
+}
+
+@media (max-width:390px){
+  .site-header .brand{width:185px}.site-header .brand img{width:180px}
+  .hero-v17 h1{font-size:2.7rem}
+  .funding-premium-card{padding-left:18px;padding-right:18px}
+  .funding-copy-premium h2{font-size:2.55rem}
+  .funding-visual{min-height:485px}
+  .capital-card{left:8%;width:84%}
+  .funding-use{width:46%}
+  .fu-five{width:52%!important}
+  .voice-premium-copy h2{font-size:2.35rem}
+  .voice-studio-tag{min-width:225px;font-size:.63rem}
+  .payments-approved-copy h1{font-size:2.9rem}
+}
+
+/* =========================================================
+   V57 — MOBILE-ONLY FIT / CONTRAST / HEADER SAFETY PASS
+   Based on user iPhone review set, 2026-08-19.
+   Desktop/tablet presentation intentionally unchanged.
+   ========================================================= */
+@media (max-width:640px){
+  /* Hard mobile header rule: never expose the desktop nav inline. */
+  .site-header .main-nav{display:none!important;position:absolute!important;top:78px!important;left:16px!important;right:16px!important;width:auto!important;flex-direction:column!important;align-items:stretch!important;gap:2px!important;padding:10px!important;border:1px solid rgba(16,55,91,.12)!important;border-radius:18px!important;background:rgba(255,255,255,.99)!important;box-shadow:0 22px 55px rgba(18,58,92,.20)!important;color:#173248!important}
+  .site-header .main-nav.open{display:flex!important}
+  .site-header .main-nav a{display:block!important;width:100%!important;padding:12px 13px!important;border-radius:10px!important;font-size:.94rem!important;text-align:left!important;color:#173248!important}
+  .site-header .main-nav a:hover,.site-header .main-nav a.active{background:#eef7ff!important;color:#0c72d8!important}
+  .site-header .main-nav .nav-cta{margin-top:4px!important;padding:13px 14px!important;border:0!important;border-radius:11px!important;background:linear-gradient(135deg,#168cff,#0c6fd1)!important;color:#fff!important;text-align:center!important}
+  .site-header .menu-toggle{display:block!important}
+  .site-header .brand{width:196px!important;height:56px!important}
+  .site-header .brand img{width:190px!important;max-height:54px!important;object-fit:contain!important}
+  .nav-wrap{height:82px!important}
+
+  /* Robust fixed-header breathing room for every same-page destination. */
+  section[id],#solutions,#payments,#industries,#digital,#propel,#funding,#about,#contact,#payment-analysis,#ways-to-pay{scroll-margin-top:138px!important}
+
+  /* Home hero: premium, dramatic, but no oversized type colliding with the viewport. */
+  .hero-v17{padding-top:104px!important}
+  .hero-v17 h1{font-size:clamp(2.55rem,11vw,3.15rem)!important;line-height:.94!important;letter-spacing:-.05em!important;overflow-wrap:normal!important;word-break:normal!important}
+  .hero-v17 h1 span,.hero-v17 h1 em{display:block!important;max-width:100%!important}
+  .hero-v17-kicker{font-size:.70rem!important;line-height:1.48!important;letter-spacing:.065em!important}
+
+  /* Funding: keep the headline fully below the fixed header and make the visual breathe. */
+  #funding.funding-premium{padding-top:82px!important}
+  .funding-premium-card{overflow:visible!important}
+  .funding-copy-premium h2{font-size:2.48rem!important;line-height:1!important}
+  .funding-copy-premium p{color:#4f6a82!important}
+  .funding-visual{min-height:560px!important;margin-top:8px!important}
+  .funding-orbit{top:118px!important;width:274px!important;height:274px!important}
+  .capital-card{left:9%!important;top:188px!important;width:82%!important;padding:24px 21px!important}
+  .capital-card strong{font-size:3.05rem!important}
+  .funding-use{width:45%!important;box-shadow:0 12px 28px rgba(22,67,103,.10)!important}
+  .fu-five{left:0!important;top:4px!important;width:51%!important}
+  .fu-two{right:0!important;top:62px!important}
+  .fu-three{left:0!important;bottom:10px!important}
+  .fu-four{right:0!important;bottom:20px!important}
+  .fu-five .digital-growth-list{font-size:.68rem!important;line-height:1.45!important}
+
+  /* Digital dark stack: mobile body copy and cards need stronger contrast. */
+  #digital.ecosystem-section{padding-top:84px!important}
+  .ecosystem-copy p{color:#e6f0f9!important}
+  .ecosystem-copy .service-pills span{color:#f1f8ff!important;background:rgba(255,255,255,.10)!important;border-color:rgba(151,211,255,.28)!important}
+  .ecosystem-copy .service-pills i{color:#81d0ff!important}
+
+  /* About: preserve the full connected-ecosystem graphic without side clipping. */
+  #about.about-premium{padding-top:84px!important}
+  .about-ecosystem-approved{width:96%!important;margin:0 auto!important;padding:8px 0 6px!important;overflow:visible!important}
+  .about-ecosystem-approved img{width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important}
+  .about-premium-bottom .about-lead{color:#28465f!important}
+  .about-steps p{color:#536f88!important}
+
+  /* Voice: show the whole mic, moving waveform AND the entire pill before copy starts. */
+  .voice-premium-card{overflow:hidden!important}
+  .voice-visual{height:408px!important;margin-bottom:8px!important;overflow:visible!important}
+  .vintage-mic{top:6px!important;transform:translateX(-50%) scale(.92)!important}
+  .voice-wave{top:42%!important}
+  .voice-v45-motion .voice-studio-tag,.voice-studio-tag{bottom:24px!important;transform:translateX(-50%)!important;min-width:242px!important;z-index:12!important}
+  .voice-premium-copy{position:relative!important;z-index:3!important;padding-top:10px!important}
+
+  /* Payments page: exact same mobile header behavior as the home page. */
+  body.payments-page .payments-page-hero,body.payments-page .payments-approved-hero-v36{padding-top:106px!important}
+  body.payments-page .payments-approved-copy h1{font-size:clamp(2.85rem,12vw,3.3rem)!important;line-height:.92!important;text-align:left!important}
+  body.payments-page .payments-approved-copy>p{font-size:1rem!important;line-height:1.58!important;color:#4f6b83!important;text-align:left!important}
+  body.payments-page .payments-approved-actions{display:grid!important;grid-template-columns:1fr!important}
+  body.payments-page .payments-approved-actions .btn{width:100%!important;min-height:54px!important}
+  body.payments-page .payments-approved-confidence{grid-template-columns:1fr 1fr!important;gap:18px 14px!important}
+  body.payments-page .payments-approved-confidence small{color:#5d778e!important}
+  body.payments-page .payments-approved-visual{width:100%!important;margin-left:0!important;margin-right:0!important;overflow:visible!important}
+}
+
+@media (max-width:390px){
+  .site-header .brand{width:184px!important}.site-header .brand img{width:178px!important}
+  .hero-v17 h1{font-size:2.43rem!important}
+  .funding-copy-premium h2{font-size:2.34rem!important}
+  .funding-visual{min-height:545px!important}
+  .funding-use{width:46.5%!important}
+  .fu-five{width:52%!important}
+  .voice-visual{height:398px!important}
+  body.payments-page .payments-approved-copy h1{font-size:2.75rem!important}
+}
+
+
+/* =========================================================
+   V58 — FINAL MOBILE QA / RESPONSIVE SYSTEM PASS
+   2026-08-19
+   Mobile-only corrections from the completed iPhone screenshot audit.
+   Desktop presentation intentionally unchanged.
+   ========================================================= */
+@media (max-width:720px){
+  /* MOBILE HEADER: keep it in document flow so content can never slide behind it. */
+  .site-header{
+    position:sticky!important;
+    top:0!important;
+    inset:auto!important;
+    z-index:1000!important;
+    background:rgba(255,255,255,.985)!important;
+    backdrop-filter:blur(18px)!important;
+    -webkit-backdrop-filter:blur(18px)!important;
+  }
+  .nav-wrap{height:82px!important;gap:12px!important}
+  .site-header .brand{width:196px!important;height:56px!important;flex:0 1 auto!important}
+  .site-header .brand img{width:190px!important;max-width:100%!important;max-height:54px!important;object-fit:contain!important}
+  .site-header .menu-toggle{display:block!important;flex:0 0 auto!important;padding:10px 13px!important;border-radius:10px!important;font-size:.9rem!important}
+  .site-header .main-nav{display:none!important;position:absolute!important;top:76px!important;left:16px!important;right:16px!important;width:auto!important;max-width:none!important;flex-direction:column!important;align-items:stretch!important;gap:2px!important;padding:10px!important;border:1px solid rgba(16,55,91,.12)!important;border-radius:18px!important;background:#fff!important;box-shadow:0 22px 55px rgba(18,58,92,.20)!important;z-index:1001!important}
+  .site-header .main-nav.open{display:flex!important}
+  .site-header .main-nav a{display:block!important;width:100%!important;padding:12px 13px!important;border-radius:10px!important;font-size:.94rem!important;line-height:1.2!important;text-align:left!important;color:#173248!important}
+  .site-header .main-nav .nav-cta{margin-top:4px!important;padding:13px 14px!important;background:linear-gradient(135deg,#168cff,#0c6fd1)!important;color:#fff!important;text-align:center!important}
+
+  /* Sticky header replaces the old overlay model; remove compensating top padding. */
+  .hero-v17,.payments-page-hero,.payments-approved-hero-v36,.hc49-hero,.sv48-hero,.auto51-wrap,.at52-hero,.demo51-wrap{padding-top:46px!important}
+  section[id]{scroll-margin-top:92px!important}
+
+  /* Prevent accidental horizontal overflow from decorative/visual elements. */
+  html,body{max-width:100%!important;overflow-x:hidden!important}
+  main,section,.container{min-width:0!important}
+  img,svg,video,canvas{max-width:100%!important;height:auto}
+
+  /* CALCULATORS: four useful milestones in a true horizontal scale. */
+  .slider-range-labels.nonlinear,
+  .slider-milestones.nonlinear{
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    align-items:center!important;
+    gap:0!important;
+    width:100%!important;
+    margin-top:9px!important;
+  }
+  .slider-range-labels.nonlinear span,
+  .slider-milestones.nonlinear span{display:none!important;white-space:nowrap!important;font-size:.67rem!important;line-height:1!important;color:#73889c!important;font-weight:850!important}
+  .slider-range-labels.nonlinear span:nth-child(1),
+  .slider-range-labels.nonlinear span:nth-child(4),
+  .slider-range-labels.nonlinear span:nth-child(7),
+  .slider-range-labels.nonlinear span:nth-child(10),
+  .slider-milestones.nonlinear span:nth-child(1),
+  .slider-milestones.nonlinear span:nth-child(4),
+  .slider-milestones.nonlinear span:nth-child(7),
+  .slider-milestones.nonlinear span:nth-child(10){display:block!important}
+  .slider-range-labels.nonlinear span:nth-child(1),.slider-milestones.nonlinear span:nth-child(1){text-align:left!important}
+  .slider-range-labels.nonlinear span:nth-child(4),.slider-milestones.nonlinear span:nth-child(4){text-align:center!important}
+  .slider-range-labels.nonlinear span:nth-child(7),.slider-milestones.nonlinear span:nth-child(7){text-align:center!important}
+  .slider-range-labels.nonlinear span:nth-child(10),.slider-milestones.nonlinear span:nth-child(10){text-align:right!important}
+  .calc-slider-block{overflow:hidden!important}
+  .calc-slider-block input[type=range]{width:100%!important;max-width:100%!important}
+
+  /* PAYMENT / SAVINGS result hierarchy and button fit. */
+  .ev-calc-card,.ev-calc-card.full{padding:22px 18px!important}
+  .calc-results,.calc-results.three,.full-calc-primary{grid-template-columns:1fr!important;gap:12px!important}
+  .calc-results>div,.full-calc-primary>div:not(.arrow-separator){min-height:0!important;padding:20px 18px!important}
+  .calc-link.calc-link-button,.calc-cta-zone .btn{width:100%!important;max-width:100%!important;white-space:normal!important;text-align:center!important}
+
+  /* HEALTH + COACHING: make the visual fit, then make flows read top-to-bottom. */
+  .hc49-hero-grid{gap:28px!important}
+  .hc49-visual{height:430px!important;overflow:hidden!important;margin:0 auto!important}
+  .hc49-phone{width:170px!important;height:355px!important;left:0!important;top:8px!important;transform:rotate(-4deg)!important}
+  .hc49-screen{height:310px!important}
+  .hc49-dashboard{width:76%!important;height:250px!important;right:-2%!important;top:105px!important;padding:18px!important}
+  .hc49-float{font-size:.65rem!important;padding:9px 12px!important}
+  .hc49-flowline{display:grid!important;grid-template-columns:1fr!important;gap:16px!important;padding:8px 0!important}
+  .hc49-flowline:before,.hc49-flowline b{display:none!important}
+  .hc49-flowline span{width:100%!important;min-width:0!important;margin:0!important;padding:18px!important}
+  .hc49-paycard{padding:28px 22px!important}
+  .hc49-paycard>div{display:grid!important;grid-template-columns:1fr!important;gap:18px!important}
+  .hc49-paycard>div:before,.hc49-paycard b{display:none!important}
+  .hc49-paycard span{width:100%!important;min-width:0!important;padding:18px!important}
+  .hc49-compare>div:not(.arrow){padding:26px 22px!important}
+  .hc49-compare h3{font-size:1.65rem!important;line-height:1.12!important}
+
+  /* BUSINESS SOLUTIONS: keep oversized typography powerful but fully contained. */
+  .sv48-hero h1,.sv48-heading h2,.sv48-close-card h2{overflow-wrap:normal!important;word-break:normal!important}
+  .sv48-hero h1{font-size:clamp(2.7rem,12vw,3.55rem)!important;line-height:.94!important}
+  .sv48-heading h2{font-size:clamp(2.45rem,10.5vw,3.2rem)!important;line-height:.98!important}
+  .sv48-close-card{padding:42px 24px!important}
+  .sv48-close-card h2{font-size:clamp(2.35rem,10vw,3rem)!important;line-height:.98!important}
+
+  /* ANTique / specialty page footer: inline desktop grid must never squeeze into four tiny columns. */
+  .site-footer{padding-left:24px!important;padding-right:24px!important}
+  .site-footer>div:first-child{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .site-footer>div:first-child>div{min-width:0!important;width:100%!important}
+  .site-footer a,.site-footer span,.site-footer p{overflow-wrap:anywhere!important;word-break:normal!important}
+  .site-footer>div:last-child{max-width:100%!important}
+
+  /* Antique retail CTA/footer spacing. */
+  .at52-cta .at52-btn,.demo51-submit{width:100%!important;max-width:100%!important;text-align:center!important;white-space:normal!important}
+
+  /* Funding visual: keep all floating cards inside one readable mobile composition. */
+  .funding-premium-card{overflow:hidden!important}
+  .funding-visual{min-height:520px!important}
+  .funding-use{font-size:.9rem!important}
+  .capital-card{box-shadow:0 18px 42px rgba(11,90,160,.20)!important}
+
+  /* General text contrast on pale backgrounds. */
+  .hc49 p,.sv48-section p,.funding-premium p,.about-premium p,.payments-page p{color:#587188}
+}
+
+@media (max-width:390px){
+  .site-header .brand{width:181px!important}.site-header .brand img{width:176px!important}
+  .nav-wrap{height:78px!important}
+  .site-header .main-nav{top:72px!important}
+  .slider-range-labels.nonlinear span,.slider-milestones.nonlinear span{font-size:.62rem!important}
+  .hc49-visual{height:405px!important}
+  .hc49-phone{width:158px!important;height:333px!important}
+  .hc49-dashboard{width:78%!important;height:235px!important}
+  .site-footer{padding-left:20px!important;padding-right:20px!important}
+}
