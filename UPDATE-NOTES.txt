@@ -1,0 +1,15 @@
+EAGLE VISION CAPITAL SYSTEMS — CUMULATIVE UPDATE FIXES — 2026-08-18
+
+Included since the prior update:
+- Removed the prior Propel homepage feature section completely. Do not restore/reuse that old section design.
+- Retained Propel as an external navigation/footer destination only; it opens in a new window/tab.
+- Rebuilt Business Funding into the approved “Capital for what’s next.” presentation.
+- Added Digital Growth as a funding use: Websites, Apps, Platforms, Automation and Propel.
+- Added a dedicated Technology Investment cross-sell explaining how qualified funding can support Eagle Vision Digital and Propel solutions to improve efficiency, customer experience, reach, revenue and bottom-line performance.
+- Rebuilt Dave Fowler Voice as a premium dark feature panel with animated voice/sound-wave motion around the microphone.
+- Added global external-link behavior: external websites open in a new tab/window and never replace eaglevision.biz.
+- Eagle Vision header logo returns the visitor to the top/home position.
+- Added processing-cost-strategy readability hardening: primary headline white; Eagle Vision blue reserved for emphasis.
+- Footer remains present in the supplied homepage source. Global footer/header requirements remain a hard rule for all pages.
+
+IMPORTANT: This is an update-fixes package, not a full deployment bundle. Merge these files into the current production site so approved assets/pages not included here are preserved.
