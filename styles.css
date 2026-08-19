@@ -3939,3 +3939,104 @@ body{background:#f7f9fc;color:var(--text)}
   .hc49-dashboard{width:78%!important;height:235px!important}
   .site-footer{padding-left:20px!important;padding-right:20px!important}
 }
+
+/* =========================================================
+   V59 — THREE FINAL MOBILE COLLISION FIXES
+   2026-08-19
+   ========================================================= */
+@media (max-width:720px){
+  /* 1) Funding / Digital Growth cards — reserve a permanent number rail so
+     badges never sit on top of titles or body copy. */
+  .digital-investment-grid article{
+    display:grid!important;
+    grid-template-columns:48px minmax(0,1fr)!important;
+    grid-template-rows:auto auto!important;
+    column-gap:14px!important;
+    row-gap:5px!important;
+    align-items:start!important;
+    padding:18px 16px!important;
+  }
+  .digital-investment-grid article i{
+    position:static!important;
+    grid-column:1!important;
+    grid-row:1 / span 2!important;
+    width:42px!important;
+    height:42px!important;
+    margin:0!important;
+    align-self:start!important;
+  }
+  .digital-investment-grid article b{
+    grid-column:2!important;
+    grid-row:1!important;
+    min-width:0!important;
+    margin:2px 0 0!important;
+    padding:0!important;
+    line-height:1.18!important;
+  }
+  .digital-investment-grid article small{
+    grid-column:2!important;
+    grid-row:2!important;
+    min-width:0!important;
+    margin:0!important;
+    padding:0!important;
+  }
+
+  /* 2) Connected Digital Ecosystem — reduce the composition slightly and
+     pull every floating device inside the safe mobile canvas. */
+  .digital-ecosystem-art{
+    min-height:520px!important;
+    margin:0 16px 18px!important;
+    overflow:hidden!important;
+  }
+  .digital-browser{left:4%!important;top:88px!important;width:70%!important;height:286px!important;transform:none!important}
+  .digital-phone{right:3%!important;top:128px!important;width:29%!important;height:300px!important;transform:rotate(2deg)!important}
+  .digital-portal{left:5%!important;bottom:66px!important;width:49%!important;height:145px!important}
+  .chip-ai{right:3%!important;top:68px!important}
+  .chip-pay{right:3%!important;bottom:48px!important}
+  .browser-hero strong{font-size:1.08rem!important;line-height:1.04!important}
+  .browser-hero p{font-size:.52rem!important;line-height:1.35!important}
+
+  /* 3) Homepage payments mockup — separate checkout phone and POS terminal
+     so the amounts/labels remain readable instead of colliding. */
+  .evp-visual-stage{
+    min-height:430px!important;
+    width:100%!important;
+    margin:0!important;
+    transform:none!important;
+    overflow:hidden!important;
+  }
+  .evp-dashboard-mock.upgraded{
+    left:2%!important;
+    top:10px!important;
+    width:70%!important;
+    min-height:360px!important;
+    transform:none!important;
+  }
+  .evp-phone-mock{
+    left:44%!important;
+    bottom:12px!important;
+    width:21%!important;
+    min-height:190px!important;
+    transform:rotate(-4deg)!important;
+    z-index:5!important;
+  }
+  .evp-pos-mock{
+    right:2%!important;
+    bottom:10px!important;
+    width:29%!important;
+    transform:rotate(3deg)!important;
+    z-index:4!important;
+  }
+  .pos-screen{min-height:205px!important;padding-left:9px!important;padding-right:9px!important}
+  .pos-screen strong{font-size:1.28rem!important;line-height:1!important}
+  .evp-integrated-chip{left:2%!important;bottom:18px!important;z-index:6!important}
+}
+@media (max-width:390px){
+  .digital-ecosystem-art{margin-left:10px!important;margin-right:10px!important;min-height:500px!important}
+  .digital-browser{left:3%!important;width:69%!important}
+  .digital-phone{right:2%!important;width:30%!important}
+  .digital-portal{left:4%!important;width:48%!important}
+  .evp-dashboard-mock.upgraded{width:68%!important}
+  .evp-phone-mock{left:43%!important;width:22%!important}
+  .evp-pos-mock{right:1%!important;width:30%!important}
+}
