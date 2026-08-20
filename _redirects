@@ -1,0 +1,2 @@
+/demo-blueprint /antiquetrack-demo/ 301
+/demo-blueprint/* /antiquetrack-demo/:splat 200
