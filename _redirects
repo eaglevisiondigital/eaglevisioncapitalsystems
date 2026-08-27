@@ -1,2 +1,9 @@
+/antiquetrack-demo /antiquetrack-demo/ 301
 /demo-blueprint /antiquetrack-demo/ 301
 /demo-blueprint/* /antiquetrack-demo/:splat 200
+/antiquetrack/demo-blueprint /antiquetrack-demo/ 301
+/antiquetrack/demo-blueprint/ /antiquetrack-demo/ 301
+/antiquetrack/demo-blueprint/* /antiquetrack-demo/:splat 200
+/prime49 /prime49/ 301
+/payments/prime49 /prime49/ 301
+/payments/prime49/ /prime49/ 301
