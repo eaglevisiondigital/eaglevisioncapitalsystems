@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive"/>
 <meta name="theme-color" content="#06182b"/>
 <link rel="stylesheet" href="../styles.css"/>
-<link rel="stylesheet" href="prime49.css"/>
+<link rel="stylesheet" href="prime49.css?v=63"/>
 </head>
 <body class="prime49-page">
 <header class="site-header" id="top">
@@ -49,8 +49,8 @@
       <div class="p49-statement">
         <div class="p49-statement-top"><span>MONTHLY EARNINGS</span><b>PRIME49</b></div>
         <small>PROCESSING ACTIVITY</small>
-        <strong id="hero-monthly-volume">$50,000</strong>
-        <div class="p49-statement-line"><span>Monthly payout</span><em>Calculated during walkthrough</em></div>
+        <strong id="hero-monthly-volume">$15,000</strong>
+        <div class="p49-statement-line"><span>Estimated monthly payout</span><em data-p49-hero-payout>$60</em></div>
         <div class="p49-statement-line"><span>Year-to-date</span><em>Tracked monthly</em></div>
         <div class="p49-paid"><i>✓</i><span>Payout reporting ready</span></div>
       </div>
@@ -87,35 +87,39 @@
 <section class="p49-calculator p49-section" id="payout-calculator">
   <div class="container">
     <div class="p49-section-heading reveal">
-      <div><div class="p49-eyebrow"><span></span>Prime49 Payout Calculator</div><h2>See what your current card volume could put in motion.</h2></div>
-      <p>The exact payout depends on card volume, business type and the approved setup. Use the volume tool below to prepare your review, then open the live Prime49 calculator or request verified figures from Eagle Vision.</p>
+      <div><div class="p49-eyebrow"><span></span>Prime49 Payout Calculator</div><h2>See how much your current card volume could return to your business.</h2></div>
+      <p>Move the slider in $5,000 increments. The Prime49 estimate returns $20 per month for every $5,000 in qualifying processing volume, beginning at $15,000.</p>
     </div>
     <div class="p49-calc-shell reveal" data-p49-calculator>
       <div class="p49-calc-control">
         <label for="p49-volume">Average monthly card volume</label>
-        <output data-p49-volume>$50,000</output>
-        <input aria-label="Average monthly card volume" id="p49-volume" max="1000000" min="5000" step="5000" type="range" value="50000"/>
-        <div class="p49-scale"><span>$5K</span><span>$250K</span><span>$500K</span><span>$750K</span><span>$1M</span></div>
+        <output data-p49-volume>$15,000</output>
+        <input aria-label="Average monthly card volume" aria-valuemin="15000" aria-valuemax="1000000" aria-valuenow="15000" id="p49-volume" max="1000000" min="15000" step="5000" type="range" value="15000"/>
+        <div class="p49-scale"><span>$15K</span><span>$250K</span><span>$500K</span><span>$750K</span><span>$1M</span></div>
         <div class="p49-volume-fields">
-          <div><small>MONTHLY CARD VOLUME</small><strong data-p49-monthly>$50,000</strong></div>
-          <div><small>ANNUAL CARD VOLUME</small><strong data-p49-annual>$600,000</strong></div>
+          <div>
+            <small>MONTHLY CARD VOLUME</small>
+            <strong data-p49-monthly>$15,000</strong>
+            <div class="p49-payout-return"><span>MONTHLY PAYOUT</span><b data-p49-monthly-payout>$60</b></div>
+          </div>
+          <div>
+            <small>ANNUAL CARD VOLUME</small>
+            <strong data-p49-annual>$180,000</strong>
+            <div class="p49-payout-return"><span>ANNUAL PAYOUT</span><b data-p49-annual-payout>$720</b></div>
+          </div>
         </div>
       </div>
       <div class="p49-calc-result">
-        <small>YOUR NEXT STEP</small>
-        <h3>Get a program-specific payout estimate.</h3>
-        <p>Prime49's payout is not one universal percentage. Eagle Vision will confirm your exact equipment fit, checkout presentation, eligibility and estimated payout before you commit.</p>
+        <small>YOUR ESTIMATED PRIME49 PAYOUT</small>
+        <h3><span data-p49-result-monthly>$60</span> back every month.</h3>
+        <p>At <strong data-p49-result-volume>$15,000</strong> in monthly card volume, that equals an estimated <strong data-p49-result-annual>$720</strong> returned over a full year.</p>
+        <div class="p49-formula"><span>$20</span><p>for every <b>$5,000</b> in qualifying monthly processing volume</p></div>
         <div class="p49-calc-actions">
-          <button class="btn btn-primary" id="p49-live-toggle" type="button">Open the Live Calculator →</button>
-          <a class="btn p49-btn-dark" href="#prime49-review">Get My Verified Estimate</a>
+          <a class="btn btn-primary" href="#prime49-review">Get My Prime49 Review →</a>
+          <a class="btn p49-btn-dark" href="tel:+18508124711">Call (850) 812-4711</a>
         </div>
-        <p class="p49-calc-note">Estimates are for demonstration only. Final payout and program terms are confirmed during enrollment.</p>
+        <p class="p49-calc-note">Calculator estimates use the Prime49 payout schedule provided to Eagle Vision. Eligibility and final program terms are confirmed during enrollment.</p>
       </div>
-    </div>
-    <div class="p49-live-calculator" id="p49-live-calculator" hidden>
-      <div class="p49-live-top"><div><small>LIVE PRIME49 TOOL</small><strong>Original payout calculator</strong></div><a href="https://getprime49.com/#calculator" rel="noopener noreferrer" target="_blank">Open in a new window ↗</a></div>
-      <iframe data-src="https://getprime49.com/#calculator" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Prime49 live monthly payout calculator"></iframe>
-      <p>If the live tool is blocked by your browser, use “Open in a new window.” Eagle Vision will still provide the exact verified estimate during your walkthrough.</p>
     </div>
   </div>
 </section>
@@ -185,7 +189,7 @@
     <div class="p49-faq-head reveal"><div class="p49-eyebrow"><span></span>Prime49 FAQ</div><h2>Questions merchants ask before the walkthrough.</h2><p>The walkthrough exists to make the program specific to your business rather than forcing every merchant into the same setup.</p></div>
     <div class="p49-accordion reveal">
       <details open><summary>Will customers see anything different?<span>+</span></summary><p>Yes. Pricing is shown clearly at checkout. You review and approve the presentation before anything is activated.</p></details>
-      <details><summary>How much will the monthly payout be?<span>+</span></summary><p>It depends on your card volume, business type and approved setup. The live calculator offers a demonstration estimate; exact figures are provided during the walkthrough.</p></details>
+      <details><summary>How much will the monthly payout be?<span>+</span></summary><p>The current Prime49 estimate is $20 per month for every $5,000 in qualifying card volume. At the $15,000 program minimum, that is $60 per month or $720 per year. Eligibility and final program terms are confirmed during the Eagle Vision walkthrough.</p></details>
       <details><summary>Will I need to replace my current equipment?<span>+</span></summary><p>Not always. Compatibility depends on the existing environment. Eagle Vision confirms what can stay, what needs to change and which equipment fits best.</p></details>
       <details><summary>Is every business eligible?<span>+</span></summary><p>No. Eligibility varies by business type, processing profile and operational complexity. Seasonal and complex environments may fit a different Eagle Vision payment strategy.</p></details>
       <details><summary>What about compliance?<span>+</span></summary><p>The program is structured around applicable card-brand rules and state law, with clear checkout presentation and full terms and disclosures during enrollment.</p></details>
@@ -200,7 +204,9 @@
     <div class="p49-review-copy"><div class="p49-eyebrow"><span></span>Free Prime49 Review</div><h2>See whether your business qualifies—and what the payout could look like.</h2><p>Eagle Vision will review your processing volume, current equipment, checkout flow and locations, then provide the exact program fit before anything changes.</p><div class="p49-review-points"><span><i>✓</i>No-cost walkthrough</span><span><i>✓</i>Exact checkout preview</span><span><i>✓</i>Equipment-fit review</span><span><i>✓</i>Verified payout estimate</span></div></div>
     <form action="mailto:info@eaglevision.biz" class="p49-form" method="post" enctype="text/plain">
       <input name="subject" type="hidden" value="Prime49 Review Request"/>
-      <input data-p49-form-volume name="Approximate Monthly Card Volume" type="hidden" value="$50,000"/>
+      <input data-p49-form-volume name="Approximate Monthly Card Volume" type="hidden" value="$15,000"/>
+      <input data-p49-form-monthly-payout name="Estimated Monthly Prime49 Payout" type="hidden" value="$60"/>
+      <input data-p49-form-annual-payout name="Estimated Annual Prime49 Payout" type="hidden" value="$720"/>
       <label>Full Name*<input name="Full Name" required type="text"/></label>
       <label>Business Name*<input name="Business Name" required type="text"/></label>
       <label>Email Address*<input name="Email" required type="email"/></label>
@@ -209,7 +215,7 @@
       <label>Number of Locations<select name="Locations"><option>1 location</option><option>2–3 locations</option><option>4–10 locations</option><option>11+ locations</option></select></label>
       <label class="full">Current payment setup<textarea name="Current Setup" placeholder="Tell us what terminal, POS or payment setup you use today." rows="3"></textarea></label>
       <button class="btn btn-primary full" type="submit">Request My Prime49 Walkthrough →</button>
-      <small class="full">Prime49 eligibility, payout amounts, equipment inclusion and final terms vary by business and approved setup. Full disclosures are provided during enrollment.</small>
+      <small class="full">Calculator estimates follow the current Prime49 schedule of $20 per $5,000 in qualifying monthly processing volume. Eligibility, equipment inclusion and final program terms are confirmed during enrollment.</small>
     </form>
   </div>
 </section>
@@ -224,6 +230,6 @@
   <div class="container footer-bottom"><span>© 2026 Eagle Vision Capital Systems, LLC.</span><span>Your Vision. Our Technology. Your Future.</span></div>
 </footer>
 <script src="../script.js"></script>
-<script src="prime49.js"></script>
+<script src="prime49.js?v=63"></script>
 </body>
 </html>
