@@ -54,7 +54,7 @@
     setText('[data-p49-fee-monthly],[data-p49-result-fee-monthly]', money(monthlyFeeSavings));
     setText('[data-p49-fee-annual],[data-p49-result-fee-annual]', money(annualFeeSavings));
     setText('[data-p49-total-monthly],[data-p49-breakdown-total-monthly]', money(totalMonthlyImpact));
-    setText('[data-p49-total-annual],[data-p49-breakdown-total-annual]', money(totalAnnualImpact));
+    setText('[data-p49-total-annual],[data-p49-breakdown-total-annual],[data-p49-cta-annual]', money(totalAnnualImpact));
 
     setValue('[data-p49-form-volume]', money(volume));
     setValue('[data-p49-form-rate]', rateText(effectiveRatePercent));

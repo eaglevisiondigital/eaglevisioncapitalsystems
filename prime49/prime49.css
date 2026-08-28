@@ -26,17 +26,19 @@
 @media(max-width:720px){.p49-rate-heading{gap:14px}.p49-rate-heading output{font-size:27px}.p49-cost-preview{grid-template-columns:1fr 1fr}.p49-impact-breakdown article{grid-template-columns:1fr auto}.p49-formula-row{grid-template-columns:1fr}.p49-calc-result h3{font-size:34px}}
 @media(max-width:480px){.p49-rate-control{padding:18px 16px}.p49-rate-heading{flex-direction:column;gap:12px}.p49-rate-heading output{font-size:30px}.p49-cost-preview{grid-template-columns:1fr}.p49-cost-preview>span{grid-column:auto}.p49-impact-breakdown article{grid-template-columns:1fr;grid-template-areas:"label" "monthly" "annual"}.p49-impact-breakdown article>strong,.p49-impact-breakdown article>em{text-align:left}.p49-impact-breakdown article>strong{margin-top:8px;font-size:29px}.p49-calc-result h3{font-size:31px}.p49-formula-row .p49-formula{min-height:0}}
 
-
-/* V65 — Prime49 green money-impact refinement + dark-header logo correction */
+/* V66 — Prime49 color-only refinement.
+   The approved calculator layout, functionality, formulas, copy, spacing and responsive behavior are unchanged. */
 :root{
   --p49-green:#169b62;
   --p49-green-deep:#0e7448;
   --p49-green-pale:#eaf8f0;
   --p49-green-pale-2:#f4fcf7;
   --p49-green-line:#b9e4cb;
+  --p49-green-pill-soft-1:#b4d4b5;
+  --p49-green-pill-soft-2:#8fbe97;
 }
 
-/* Processing-volume cards: keep the approved structure, shift payout areas to a money-forward green treatment. */
+/* Existing monthly/annual processing cards: pale green surfaces, same layout. */
 .p49-volume-fields>div{
   background:linear-gradient(145deg,var(--p49-green-pale-2),var(--p49-green-pale));
   border-color:var(--p49-green-line);
@@ -44,21 +46,21 @@
 .p49-payout-return{border-top-color:#c5e9d5}
 .p49-payout-return b{color:var(--p49-green)}
 
-/* Current-cost estimate cards: pale green surfaces with Irish-green figures. */
+/* Existing monthly/yearly estimated-cost cards: pale green with Irish-green values. */
 .p49-cost-preview>strong{
   background:linear-gradient(145deg,var(--p49-green-pale-2),var(--p49-green-pale));
   border-color:var(--p49-green-line);
 }
 .p49-cost-preview>strong b{color:var(--p49-green)}
 
-/* Result pills: top two receive a soft green glass treatment with bright-white typography. */
+/* Existing top-two result pills: approved soft pale green and bright-white typography. */
 .p49-impact-breakdown article:not(.p49-impact-total){
-  background:linear-gradient(135deg,rgba(22,155,98,.34),rgba(22,155,98,.18));
-  border-color:rgba(130,225,177,.44);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+  background:linear-gradient(135deg,var(--p49-green-pill-soft-1),var(--p49-green-pill-soft-2));
+  border-color:rgba(255,255,255,.62);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 10px 24px rgba(5,42,25,.12);
 }
 .p49-impact-breakdown article:not(.p49-impact-total)>div span{
-  background:rgba(255,255,255,.16);
+  background:rgba(255,255,255,.18);
   color:#fff;
 }
 .p49-impact-breakdown article:not(.p49-impact-total)>div small,
@@ -66,11 +68,120 @@
 .p49-impact-breakdown article:not(.p49-impact-total)>em,
 .p49-impact-breakdown article:not(.p49-impact-total)>em b{
   color:#fff;
+  text-shadow:0 1px 2px rgba(7,54,31,.34);
 }
 
-/* Combined result: replace bright blue with bold Irish green. */
+/* Existing combined result pill: Irish green with bold white type. */
 .p49-impact-breakdown .p49-impact-total{
   background:linear-gradient(135deg,var(--p49-green),var(--p49-green-deep));
   border-color:rgba(255,255,255,.18);
   box-shadow:0 16px 34px rgba(14,116,72,.30);
 }
+
+
+/* V67 — locked Prime49 result hierarchy + lead-capture enhancements.
+   Calculator formulas, controls, layout, colors and behavior remain unchanged. */
+.p49-impact-breakdown article{
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:"label annual" "label monthly";
+  gap:5px 22px;
+}
+.p49-impact-breakdown article>strong{
+  grid-area:annual;
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-end;
+  gap:9px;
+  font-size:31px;
+  line-height:1;
+  color:#fff;
+  letter-spacing:-.04em;
+  text-align:right;
+  white-space:nowrap;
+}
+.p49-impact-breakdown article>strong b{
+  color:inherit;
+  font:inherit;
+  letter-spacing:inherit;
+}
+.p49-impact-breakdown article>strong span{
+  color:inherit;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:0;
+}
+.p49-impact-breakdown article>em{
+  grid-area:monthly;
+  color:#fff;
+  font-size:13px;
+  font-style:normal;
+  font-weight:800;
+  text-align:right;
+  white-space:nowrap;
+}
+.p49-impact-breakdown article>em b{
+  color:inherit;
+  font-size:18px;
+}
+
+.p49-estimate-cta{
+  position:relative;
+  z-index:3;
+  margin-top:-1px;
+  padding:0 0 78px;
+  background:linear-gradient(180deg,#061a30 0%,#071f38 54%,#f4f9fd 54%,#f4f9fd 100%);
+}
+.p49-estimate-cta-card{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(270px,.65fr);
+  gap:42px;
+  align-items:center;
+  padding:40px 44px;
+  border:1px solid rgba(111,198,255,.26);
+  border-radius:26px;
+  background:linear-gradient(135deg,#0b355d,#082849 63%,#0e7448 150%);
+  color:#fff;
+  box-shadow:0 28px 70px rgba(3,24,44,.26);
+}
+.p49-estimate-cta-copy .p49-eyebrow{margin-bottom:14px}
+.p49-estimate-cta-copy h2{
+  margin:0;
+  max-width:900px;
+  font-size:clamp(31px,3.2vw,49px);
+  line-height:1.03;
+  letter-spacing:-.04em;
+}
+.p49-estimate-cta-copy h2 strong{color:#5fe0a4}
+.p49-estimate-cta-copy p{
+  max-width:850px;
+  margin:17px 0 0;
+  color:#c4d7e5;
+  font-size:14px;
+  line-height:1.65;
+}
+.p49-estimate-cta-actions{display:grid;gap:11px}
+.p49-estimate-cta-actions .btn{width:100%;min-height:55px;text-align:center}
+.p49-btn-light{background:#fff;color:#0a2845;border-color:#fff}
+.p49-btn-light:hover{background:#eaf8f0;color:#0e7448}
+
+@media(max-width:900px){
+  .p49-estimate-cta-card{grid-template-columns:1fr;gap:28px}
+  .p49-estimate-cta-actions{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .p49-estimate-cta{padding:0 0 58px;background:linear-gradient(180deg,#061a30 0%,#071f38 48%,#f4f9fd 48%,#f4f9fd 100%)}
+  .p49-estimate-cta-card{padding:29px 22px;border-radius:22px}
+  .p49-estimate-cta-actions{grid-template-columns:1fr}
+  .p49-impact-breakdown article{grid-template-columns:1fr auto;grid-template-areas:"label annual" "label monthly"}
+}
+@media(max-width:480px){
+  .p49-impact-breakdown article{grid-template-columns:1fr;grid-template-areas:"label" "annual" "monthly"}
+  .p49-impact-breakdown article>strong,
+  .p49-impact-breakdown article>em{justify-content:flex-start;text-align:left}
+  .p49-impact-breakdown article>strong{margin-top:10px;font-size:30px;white-space:normal}
+  .p49-impact-breakdown article>em{font-size:13px}
+  .p49-estimate-cta-copy h2{font-size:34px}
+}
+
+/* V67 — Netlify lead-capture honeypot. */
+.p49-hidden-field{display:none!important}
