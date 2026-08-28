@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex,nofollow,noarchive"/>
 <meta name="theme-color" content="#06182b"/>
 <link rel="stylesheet" href="../styles.css"/>
-<link rel="stylesheet" href="prime49.css?v=63"/>
+<link rel="stylesheet" href="prime49.css?v=64"/>
 </head>
 <body class="prime49-page">
 <header class="site-header" id="top">
@@ -87,15 +87,30 @@
 <section class="p49-calculator p49-section" id="payout-calculator">
   <div class="container">
     <div class="p49-section-heading reveal">
-      <div><div class="p49-eyebrow"><span></span>Prime49 Payout Calculator</div><h2>See how much your current card volume could return to your business.</h2></div>
-      <p>Move the slider in $5,000 increments. The Prime49 estimate returns $20 per month for every $5,000 in qualifying processing volume, beginning at $15,000.</p>
+      <div><div class="p49-eyebrow"><span></span>Prime49 Bottom-Line Calculator</div><h2>See the payout, the costs you stop paying, and the total impact on your bottom line.</h2></div>
+      <p>Set your monthly card volume, then choose your estimated current all-in effective rate. The calculator separates your Prime49 payout from the payment costs potentially eliminated—and combines both into one monthly and annual impact.</p>
     </div>
     <div class="p49-calc-shell reveal" data-p49-calculator>
       <div class="p49-calc-control">
-        <label for="p49-volume">Average monthly card volume</label>
-        <output data-p49-volume>$15,000</output>
-        <input aria-label="Average monthly card volume" aria-valuemin="15000" aria-valuemax="1000000" aria-valuenow="15000" id="p49-volume" max="1000000" min="15000" step="5000" type="range" value="15000"/>
-        <div class="p49-scale"><span>$15K</span><span>$250K</span><span>$500K</span><span>$750K</span><span>$1M</span></div>
+        <div class="p49-control-group">
+          <label for="p49-volume">Average monthly card volume</label>
+          <output data-p49-volume>$15,000</output>
+          <input aria-label="Average monthly card volume" aria-valuemin="15000" aria-valuemax="1000000" aria-valuenow="15000" id="p49-volume" max="1000000" min="15000" step="5000" type="range" value="15000"/>
+          <div class="p49-scale"><span>$15K</span><span>$250K</span><span>$500K</span><span>$750K</span><span>$1M</span></div>
+        </div>
+
+        <div class="p49-rate-control">
+          <div class="p49-rate-heading">
+            <div>
+              <label for="p49-effective-rate">Estimated current all-in effective rate</label>
+              <small>Include processing, SaaS or platform, equipment, gateway, statement and other recurring payment costs.</small>
+            </div>
+            <output data-p49-rate>4.5%</output>
+          </div>
+          <input aria-label="Estimated current all-in effective payment cost rate" aria-valuemin="2.9" aria-valuemax="5.0" aria-valuenow="4.5" id="p49-effective-rate" max="5.0" min="2.9" step="0.1" type="range" value="4.5"/>
+          <div class="p49-scale p49-rate-scale"><span>2.9%</span><span>3.5%</span><span>4.0%</span><span>4.5%</span><span>5.0%</span></div>
+        </div>
+
         <div class="p49-volume-fields">
           <div>
             <small>MONTHLY CARD VOLUME</small>
@@ -108,17 +123,47 @@
             <div class="p49-payout-return"><span>ANNUAL PAYOUT</span><b data-p49-annual-payout>$720</b></div>
           </div>
         </div>
+
+        <div class="p49-cost-preview">
+          <span>At the selected <b data-p49-rate-copy>4.5%</b> all-in rate, your estimated current payment costs are</span>
+          <strong><b data-p49-fee-monthly>$675</b><small>/ month</small></strong>
+          <strong><b data-p49-fee-annual>$8,100</b><small>/ year</small></strong>
+        </div>
       </div>
+
       <div class="p49-calc-result">
-        <small>YOUR ESTIMATED PRIME49 PAYOUT</small>
-        <h3><span data-p49-result-monthly>$60</span> back every month.</h3>
-        <p>At <strong data-p49-result-volume>$15,000</strong> in monthly card volume, that equals an estimated <strong data-p49-result-annual>$720</strong> returned over a full year.</p>
-        <div class="p49-formula"><span>$20</span><p>for every <b>$5,000</b> in qualifying monthly processing volume</p></div>
+        <small>TOTAL ESTIMATED BOTTOM-LINE IMPACT</small>
+        <h3><span data-p49-total-monthly>$735</span> back to your business every month.</h3>
+        <p>That equals an estimated <strong data-p49-total-annual>$8,820</strong> per year when the payment costs you stop paying are combined with your Prime49 payout.</p>
+
+        <div class="p49-impact-breakdown">
+          <article>
+            <div><span>01</span><small>PRIME49 PAYOUT</small></div>
+            <strong data-p49-result-monthly>$60</strong>
+            <em><b data-p49-result-annual>$720</b> / year</em>
+          </article>
+          <article>
+            <div><span>02</span><small>ESTIMATED FEES ELIMINATED</small></div>
+            <strong data-p49-result-fee-monthly>$675</strong>
+            <em><b data-p49-result-fee-annual>$8,100</b> / year</em>
+          </article>
+          <article class="p49-impact-total">
+            <div><span>03</span><small>COMBINED BOTTOM-LINE GAIN</small></div>
+            <strong data-p49-breakdown-total-monthly>$735</strong>
+            <em><b data-p49-breakdown-total-annual>$8,820</b> / year</em>
+          </article>
+        </div>
+
+        <div class="p49-formula-row">
+          <div class="p49-formula"><span>$20</span><p>Prime49 payout for every <b>$5,000</b> in qualifying monthly volume</p></div>
+          <div class="p49-formula"><span data-p49-rate-formula>4.5%</span><p>selected all-in rate used to estimate the payment costs potentially eliminated</p></div>
+        </div>
+
         <div class="p49-calc-actions">
           <a class="btn btn-primary" href="#prime49-review">Get My Prime49 Review →</a>
           <a class="btn p49-btn-dark" href="tel:+18508124711">Call (850) 812-4711</a>
         </div>
-        <p class="p49-calc-note">Calculator estimates use the Prime49 payout schedule provided to Eagle Vision. Eligibility and final program terms are confirmed during enrollment.</p>
+        <p class="p49-calc-note">Illustrative estimate only. Fee savings assume the selected all-in effective rate accurately reflects costs that would be eliminated under an approved Prime49 setup. Eagle Vision verifies statements, eligibility, equipment and final terms before enrollment.</p>
       </div>
     </div>
   </div>
@@ -201,12 +246,17 @@
 
 <section class="p49-review p49-section" id="prime49-review">
   <div class="container p49-review-card reveal">
-    <div class="p49-review-copy"><div class="p49-eyebrow"><span></span>Free Prime49 Review</div><h2>See whether your business qualifies—and what the payout could look like.</h2><p>Eagle Vision will review your processing volume, current equipment, checkout flow and locations, then provide the exact program fit before anything changes.</p><div class="p49-review-points"><span><i>✓</i>No-cost walkthrough</span><span><i>✓</i>Exact checkout preview</span><span><i>✓</i>Equipment-fit review</span><span><i>✓</i>Verified payout estimate</span></div></div>
+    <div class="p49-review-copy"><div class="p49-eyebrow"><span></span>Free Prime49 Review</div><h2>Verify the payout, the costs you can eliminate, and the total opportunity.</h2><p>Eagle Vision will review your processing statements, current equipment, checkout flow and locations, then confirm the exact program fit and bottom-line estimate before anything changes.</p><div class="p49-review-points"><span><i>✓</i>No-cost walkthrough</span><span><i>✓</i>Statement-based savings review</span><span><i>✓</i>Equipment-fit review</span><span><i>✓</i>Verified payout estimate</span></div></div>
     <form action="mailto:info@eaglevision.biz" class="p49-form" method="post" enctype="text/plain">
       <input name="subject" type="hidden" value="Prime49 Review Request"/>
       <input data-p49-form-volume name="Approximate Monthly Card Volume" type="hidden" value="$15,000"/>
+      <input data-p49-form-rate name="Estimated Current All-In Effective Rate" type="hidden" value="4.5%"/>
       <input data-p49-form-monthly-payout name="Estimated Monthly Prime49 Payout" type="hidden" value="$60"/>
       <input data-p49-form-annual-payout name="Estimated Annual Prime49 Payout" type="hidden" value="$720"/>
+      <input data-p49-form-monthly-fee-savings name="Estimated Monthly Payment Costs Eliminated" type="hidden" value="$675"/>
+      <input data-p49-form-annual-fee-savings name="Estimated Annual Payment Costs Eliminated" type="hidden" value="$8,100"/>
+      <input data-p49-form-total-monthly name="Estimated Combined Monthly Bottom-Line Impact" type="hidden" value="$735"/>
+      <input data-p49-form-total-annual name="Estimated Combined Annual Bottom-Line Impact" type="hidden" value="$8,820"/>
       <label>Full Name*<input name="Full Name" required type="text"/></label>
       <label>Business Name*<input name="Business Name" required type="text"/></label>
       <label>Email Address*<input name="Email" required type="email"/></label>
@@ -215,7 +265,7 @@
       <label>Number of Locations<select name="Locations"><option>1 location</option><option>2–3 locations</option><option>4–10 locations</option><option>11+ locations</option></select></label>
       <label class="full">Current payment setup<textarea name="Current Setup" placeholder="Tell us what terminal, POS or payment setup you use today." rows="3"></textarea></label>
       <button class="btn btn-primary full" type="submit">Request My Prime49 Walkthrough →</button>
-      <small class="full">Calculator estimates follow the current Prime49 schedule of $20 per $5,000 in qualifying monthly processing volume. Eligibility, equipment inclusion and final program terms are confirmed during enrollment.</small>
+      <small class="full">Calculator estimates combine the current Prime49 payout schedule with the effective-rate assumption selected above. Fee savings assume those payment costs are eliminated under an approved setup. Eagle Vision verifies statements, eligibility, equipment and final program terms before enrollment.</small>
     </form>
   </div>
 </section>
@@ -230,6 +280,6 @@
   <div class="container footer-bottom"><span>© 2026 Eagle Vision Capital Systems, LLC.</span><span>Your Vision. Our Technology. Your Future.</span></div>
 </footer>
 <script src="../script.js"></script>
-<script src="prime49.js?v=63"></script>
+<script src="prime49.js?v=64"></script>
 </body>
 </html>
