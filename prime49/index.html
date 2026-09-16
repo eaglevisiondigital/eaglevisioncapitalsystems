@@ -7,15 +7,17 @@
 <meta name="description" content="Explore Prime49 through Eagle Vision Payments: clear customer-facing checkout pricing, monthly merchant payouts tied to card volume, qualifying equipment options and an exact-fit walkthrough."/>
 <meta name="robots" content="noindex,nofollow,noarchive"/>
 <meta name="theme-color" content="#06182b"/>
+<meta name="ev-meta-pixel-id" content="1815473789632208"/>
 <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png"/>
 <link rel="manifest" href="../assets/site.webmanifest"/>
 <link rel="stylesheet" href="../styles.css"/>
-<link rel="stylesheet" href="prime49.css?v=67"/>
+<link rel="stylesheet" href="prime49.css?v=70"/>
 </head>
 <body class="prime49-page">
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1815473789632208&ev=PageView&noscript=1"/></noscript>
 <header class="site-header" id="top">
   <div class="container nav-wrap">
     <a aria-label="Eagle Vision Capital Systems — Home" class="brand" href="../index.html#top"><img alt="Eagle Vision Capital Systems" src="../assets/eagle-vision-capital-systems-logo-prime49-v66.png"/></a>
@@ -27,7 +29,7 @@
       <a href="https://eaglevision.digital" rel="noopener noreferrer" target="_blank">Digital</a>
       <a href="https://kingdompropel.com" rel="noopener noreferrer" target="_blank">Propel</a>
       <a href="../index.html#about">About</a>
-      <a class="nav-cta" href="#prime49-review">Free Consultation</a>
+      <a class="nav-cta" href="#prime49-review" data-ev-event="Prime49ConsultationCTA">Free Consultation</a>
     </nav>
   </div>
 </header>
@@ -41,8 +43,8 @@
       <h1>Turn the card volume you already process into a <em>monthly business payout.</em></h1>
       <p>Prime49 uses clear customer-facing checkout pricing to offset the cost of card acceptance, then sends qualifying merchants a monthly payout based on program processing activity.</p>
       <div class="p49-actions">
-        <a class="btn btn-primary" href="#payout-calculator">Estimate My Payout →</a>
-        <a class="btn p49-btn-ghost" href="#how-it-works">See How It Works</a>
+        <a class="btn btn-primary" href="#payout-calculator" data-ev-event="Prime49CalculatorStart">Calculate My Potential Savings →</a>
+        <a class="btn p49-btn-ghost" href="#how-it-works" data-ev-event="Prime49HowItWorks">See How It Works</a>
       </div>
       <div class="p49-trust-row" aria-label="Prime49 program highlights">
         <span><b>Monthly payout</b><small>Tied to processing activity</small></span>
@@ -78,7 +80,7 @@
       <div class="p49-eyebrow dark"><span></span>What Is Prime49?</div>
       <h2>What used to be a processing expense can become a <em>visible monthly return.</em></h2>
       <p>Card-processing costs normally appear after the sale and quietly pressure margin. Prime49 moves that cost into a clear checkout presentation that customers can see, then returns a monthly payout to qualifying merchants who remain active on the program.</p>
-      <a class="p49-text-link" href="#prime49-review">Schedule my free Prime49 consultation →</a>
+      <a class="p49-text-link" href="#prime49-review" data-ev-event="Prime49ConsultationCTA">Schedule my free Prime49 consultation →</a>
     </div>
     <div class="p49-benefit-grid reveal">
       <article><span>01</span><i>$</i><h3>Get paid every month</h3><p>Receive a payout tied to your own Prime49 processing activity, supported by a monthly earnings statement.</p></article>
@@ -165,8 +167,8 @@
         </div>
 
         <div class="p49-calc-actions">
-          <a class="btn btn-primary" href="#prime49-review">Schedule My Free Prime49 Consultation →</a>
-          <a class="btn p49-btn-dark" href="tel:+18508124711">Call (850) 812-4711</a>
+          <a class="btn btn-primary" href="#prime49-review" data-ev-event="Prime49ConsultationCTA">Schedule My Free Prime49 Consultation →</a>
+          <a class="btn p49-btn-dark" href="tel:+18508124711" data-ev-event="Prime49CallClick">Call (850) 812-4711</a>
         </div>
         <p class="p49-calc-note">Illustrative estimate only. Fee savings assume the selected all-in effective rate accurately reflects costs that would be eliminated under an approved Prime49 setup. Eagle Vision verifies statements, eligibility, equipment and final terms before enrollment.</p>
       </div>
@@ -182,8 +184,8 @@
       <p>Eagle Vision will verify your current all-in costs, confirm program eligibility, review equipment fit and give you a program-specific Prime49 estimate before anything changes.</p>
     </div>
     <div class="p49-estimate-cta-actions">
-      <a class="btn btn-primary" href="#prime49-review">Schedule My Free Prime49 Consultation →</a>
-      <a class="btn p49-btn-light" href="tel:+18508124711">Call (850) 812-4711</a>
+      <a class="btn btn-primary" href="#prime49-review" data-ev-event="Prime49ConsultationCTA">Schedule My Free Prime49 Consultation →</a>
+      <a class="btn p49-btn-light" href="tel:+18508124711" data-ev-event="Prime49CallClick">Call (850) 812-4711</a>
     </div>
   </div>
 </section>
@@ -266,9 +268,10 @@
 <section class="p49-review p49-section" id="prime49-review">
   <div class="container p49-review-card reveal">
     <div class="p49-review-copy"><div class="p49-eyebrow"><span></span>Free Prime49 Consultation</div><h2>Verify the payout, the costs you can eliminate, and the total opportunity.</h2><p>Eagle Vision will review your processing statements, current equipment, checkout flow and locations, then confirm the exact program fit and bottom-line estimate before anything changes.</p><div class="p49-review-points"><span><i>✓</i>No-cost consultation</span><span><i>✓</i>Statement-based savings review</span><span><i>✓</i>Equipment-fit review</span><span><i>✓</i>Verified payout estimate</span></div></div>
-    <form class="p49-form" name="prime49-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="prime49-thank-you.html">
+    <form class="p49-form p49-lead-form" id="prime49-lead-form" name="prime49-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="prime49-thank-you.html" data-ev-lead-form>
       <input type="hidden" name="form-name" value="prime49-consultation"/>
       <p class="p49-hidden-field"><label>Do not fill this out: <input name="bot-field"/></label></p>
+      <input name="lead_source" type="hidden" value="Prime49 paid-social and direct-response funnel"/>
       <input data-p49-form-volume name="calculator_monthly_card_volume" type="hidden" value="$15,000"/>
       <input data-p49-form-rate name="calculator_effective_rate" type="hidden" value="4.5%"/>
       <input data-p49-form-monthly-payout name="calculator_monthly_prime49_payout" type="hidden" value="$60"/>
@@ -277,17 +280,54 @@
       <input data-p49-form-annual-fee-savings name="calculator_annual_fees_eliminated" type="hidden" value="$8,100"/>
       <input data-p49-form-total-monthly name="calculator_combined_monthly_impact" type="hidden" value="$735"/>
       <input data-p49-form-total-annual name="calculator_combined_annual_impact" type="hidden" value="$8,820"/>
+      <input data-ev-attribution="utm_source" name="utm_source" type="hidden"/>
+      <input data-ev-attribution="utm_medium" name="utm_medium" type="hidden"/>
+      <input data-ev-attribution="utm_campaign" name="utm_campaign" type="hidden"/>
+      <input data-ev-attribution="utm_content" name="utm_content" type="hidden"/>
+      <input data-ev-attribution="utm_term" name="utm_term" type="hidden"/>
+      <input data-ev-attribution="fbclid" name="fbclid" type="hidden"/>
+      <input data-ev-attribution="landing_page" name="landing_page" type="hidden"/>
+      <input data-ev-attribution="referrer" name="referrer" type="hidden"/>
+      <input data-ev-attribution="submitted_at" name="submitted_at" type="hidden"/>
+
+      <div class="p49-form-intro full">
+        <span>STEP 1 OF 2</span>
+        <h3>Request your free savings review.</h3>
+        <p>We will verify your current costs, confirm equipment fit and show you the program-specific opportunity before anything changes.</p>
+      </div>
+
       <label>Full Name*<input name="full_name" required type="text" autocomplete="name"/></label>
       <label>Business Name*<input name="business_name" required type="text" autocomplete="organization"/></label>
       <label>Email Address*<input name="email" required type="email" autocomplete="email"/></label>
-      <label>Phone Number*<input name="phone" required type="tel" autocomplete="tel"/></label>
-      <label>Type of Business*<input name="business_type" required type="text"/></label>
-      <label>Number of Locations<select name="locations"><option>1 location</option><option>2–3 locations</option><option>4–10 locations</option><option>11+ locations</option></select></label>
-      <label>Preferred Contact Method<select name="preferred_contact_method"><option>Phone call</option><option>Email</option><option>Text message</option></select></label>
-      <label>Best Time to Reach You<input name="best_time_to_reach" type="text" placeholder="Example: Weekdays after 2 PM"/></label>
-      <label class="full">Current payment setup<textarea name="current_setup" placeholder="Tell us what terminal, POS or payment setup you use today." rows="3"></textarea></label>
-      <button class="btn btn-primary full" type="submit">Schedule My Free Prime49 Consultation →</button>
-      <small class="full">Calculator estimates combine the current Prime49 payout schedule with the effective-rate assumption selected above. Fee savings assume those payment costs are eliminated under an approved setup. Eagle Vision verifies statements, eligibility, equipment and final program terms before enrollment.</small>
+      <label>Phone Number*<input name="phone" required type="tel" autocomplete="tel" inputmode="tel"/></label>
+
+      <label class="full p49-volume-confirm" for="p49-volume-confirmation">
+        <input id="p49-volume-confirmation" name="volume_confirmation" required type="checkbox" value="Confirmed"/>
+        <span><b>Confirm your estimate:</b> My business processes approximately <strong data-p49-confirm-volume>$15,000</strong> per month in card volume.</span>
+      </label>
+      <p class="full p49-adjust-note">Need to change that number? <a href="#payout-calculator">Adjust the calculator first.</a></p>
+
+      <details class="p49-optional-details full">
+        <summary>Add optional business details <span>+</span></summary>
+        <div class="p49-optional-grid">
+          <label>Type of Business<input name="business_type" type="text" autocomplete="organization-title"/></label>
+          <label>Number of Locations<select name="locations"><option value="">Select one</option><option>1 location</option><option>2–3 locations</option><option>4–10 locations</option><option>11+ locations</option></select></label>
+          <label>Preferred Contact Method<select name="preferred_contact_method"><option>Phone call</option><option>Email</option><option>Text message</option></select></label>
+          <label>Best Time to Reach You<input name="best_time_to_reach" type="text" placeholder="Example: Weekdays after 2 PM"/></label>
+          <label class="full">Current payment setup<textarea name="current_setup" placeholder="Terminal, POS, gateway, monthly platform fees, equipment costs or anything else that would help us understand your current setup." rows="3"></textarea></label>
+        </div>
+      </details>
+
+      <label class="full p49-contact-consent" for="p49-contact-consent">
+        <input id="p49-contact-consent" name="contact_permission" required type="checkbox" value="Yes"/>
+        <span>I agree that Eagle Vision Payments may contact me by phone or email about this request. If I select text as my preferred method, message and data rates may apply.</span>
+      </label>
+
+      <button class="btn btn-primary full" type="submit" data-ev-event="Prime49LeadSubmit">Get My Free Savings Review →</button>
+      <div class="full p49-form-assurance">
+        <span>No-cost review · No obligation · Nothing changes without your approval</span>
+        <small>Calculator estimates combine the current Prime49 payout schedule with the effective-rate assumption selected above. Fee savings assume those costs are eliminated under an approved setup. Eagle Vision verifies statements, eligibility, equipment and final program terms before enrollment. <a href="privacy.html">Privacy notice</a>.</small>
+      </div>
     </form>
   </div>
 </section>
@@ -296,12 +336,14 @@
   <div class="container footer-grid">
     <div class="footer-brand"><img alt="Eagle Vision Capital Systems" src="../assets/eagle-vision-capital-systems-logo-prime49-v66.png"/><p>Digital technology, platforms, payments and purpose-built solutions designed to move organizations forward.</p></div>
     <div><h4>Solutions</h4><a href="../payments.html">Eagle Vision Payments</a><a href="https://eaglevision.digital" rel="noopener noreferrer" target="_blank">Eagle Vision Digital</a><a href="https://kingdompropel.com" rel="noopener noreferrer" target="_blank">Propel</a><a href="https://davefowlervoice.com" rel="noopener noreferrer" target="_blank">Dave Fowler Voice</a></div>
-    <div><h4>Payment Programs</h4><a href="#top">Prime49</a><a href="../payments.html#calculators">Savings Calculators</a><a href="../payments.html#ways-to-pay">Ways to Get Paid</a><a href="../payments.html#payment-analysis">Payment Analysis</a></div>
+    <div><h4>Payment Programs</h4><a href="#top">Prime49</a><a href="../payments.html#calculators">Savings Calculators</a><a href="../payments.html#ways-to-pay">Ways to Get Paid</a><a href="../payments.html#payment-analysis">Payment Analysis</a><a href="privacy.html">Privacy</a></div>
     <div><h4>Contact</h4><a href="tel:+18508124711">(850) 812-4711</a><a href="mailto:info@eaglevision.biz">info@eaglevision.biz</a><span>Fort Walton Beach, Florida</span><span>Serving businesses nationwide</span></div>
   </div>
   <div class="container footer-bottom"><span>© 2026 Eagle Vision Capital Systems, LLC.</span><span>Your Vision. Our Technology. Your Future.</span></div>
 </footer>
 <script src="../script.js"></script>
-<script src="prime49.js?v=67"></script>
+<script src="prime49-ad-config.js?v=70"></script>
+<script src="prime49-tracking.js?v=70"></script>
+<script src="prime49.js?v=70"></script>
 </body>
 </html>
