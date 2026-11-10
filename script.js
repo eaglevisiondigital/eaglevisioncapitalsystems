@@ -5,154 +5,20 @@ const observer=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIn
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const yearEl=document.getElementById('year');if(yearEl){yearEl.textContent=new Date().getFullYear();}
 
-
-/* =========================================================
-   V22 — Eagle Vision savings calculators
-   ========================================================= */
+/* V22 — Eagle Vision savings calculators */
 (() => {
   const volumeMilestones = [3000, 5000, 10000, 25000, 40000, 60000, 100000, 200000, 500000, 1000000];
-
-  const money = (n) => new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0
-  }).format(n);
-
-  const volumeText = (n) => money(n);
-
-  function ecosystemTier(volume) {
-    if (volume < 10000) return { upfront: 250, monthly: 10, custom: false };
-    if (volume < 20000) return { upfront: 500, monthly: 25, custom: false };
-    if (volume < 40000) return { upfront: 1000, monthly: 50, custom: false };
-    if (volume < 75000) return { upfront: 1500, monthly: 75, custom: false };
-    if (volume <= 100000) return { upfront: 2000, monthly: 100, custom: false };
-    return { upfront: 0, monthly: 0, custom: true };
-  }
-
-  document.querySelectorAll('[data-processing-calc]').forEach(calc => {
-    const slider = calc.querySelector('[data-volume-slider]');
-    if (!slider) return;
-
-    const update = () => {
-      const volume = volumeMilestones[Number(slider.value)] || 25000;
-      const estimatedFees = volume * 0.04;
-      const monthlySavings = estimatedFees * 0.99;
-      const annualSavings = monthlySavings * 12;
-
-      calc.querySelectorAll('[data-volume-label]').forEach(el => el.textContent = volumeText(volume));
-      calc.querySelectorAll('[data-est-fees]').forEach(el => el.textContent = money(estimatedFees));
-      calc.querySelectorAll('[data-monthly-save]').forEach(el => el.textContent = money(monthlySavings));
-      calc.querySelectorAll('[data-annual-save]').forEach(el => el.textContent = money(annualSavings));
-    };
-
-    slider.addEventListener('input', update);
-    update();
-  });
-
-  document.querySelectorAll('[data-ecosystem-calc]').forEach(calc => {
-    const slider = calc.querySelector('[data-volume-slider]');
-    if (!slider) return;
-
-    const update = () => {
-      const volume = volumeMilestones[Number(slider.value)] || 25000;
-      const tier = ecosystemTier(volume);
-      const note = calc.querySelector('[data-custom-note]');
-
-      calc.querySelectorAll('[data-volume-label]').forEach(el => el.textContent = volumeText(volume));
-
-      if (tier.custom) {
-        calc.querySelectorAll('[data-upfront-save]').forEach(el => el.textContent = 'CUSTOM');
-        calc.querySelectorAll('[data-platform-save]').forEach(el => el.textContent = 'CUSTOM');
-        calc.querySelectorAll('[data-firstyear-save]').forEach(el => el.textContent = 'CUSTOM QUOTE');
-        if (note) note.hidden = false;
-      } else {
-        const firstYear = tier.upfront + tier.monthly * 12;
-        calc.querySelectorAll('[data-upfront-save]').forEach(el => el.textContent = money(tier.upfront));
-        calc.querySelectorAll('[data-platform-save]').forEach(el => {
-          el.textContent = el.closest('.ecosystem-result-hero') ? `${money(tier.monthly)}/MO` : money(tier.monthly);
-        });
-        calc.querySelectorAll('[data-firstyear-save]').forEach(el => el.textContent = money(firstYear));
-        if (note) note.hidden = true;
-      }
-    };
-
-    slider.addEventListener('input', update);
-    update();
-  });
+  const money = (n) => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+  function ecosystemTier(volume) {if(volume<10000)return{upfront:250,monthly:10,custom:false};if(volume<20000)return{upfront:500,monthly:25,custom:false};if(volume<40000)return{upfront:1000,monthly:50,custom:false};if(volume<75000)return{upfront:1500,monthly:75,custom:false};if(volume<=100000)return{upfront:2000,monthly:100,custom:false};return{upfront:0,monthly:0,custom:true};}
+  document.querySelectorAll('[data-processing-calc]').forEach(calc=>{const slider=calc.querySelector('[data-volume-slider]');if(!slider)return;const update=()=>{const volume=volumeMilestones[Number(slider.value)]||25000;const estimatedFees=volume*.04;const monthlySavings=estimatedFees*.99;const annualSavings=monthlySavings*12;calc.querySelectorAll('[data-volume-label]').forEach(el=>el.textContent=money(volume));calc.querySelectorAll('[data-est-fees]').forEach(el=>el.textContent=money(estimatedFees));calc.querySelectorAll('[data-monthly-save]').forEach(el=>el.textContent=money(monthlySavings));calc.querySelectorAll('[data-annual-save]').forEach(el=>el.textContent=money(annualSavings));};slider.addEventListener('input',update);update();});
+  document.querySelectorAll('[data-ecosystem-calc]').forEach(calc=>{const slider=calc.querySelector('[data-volume-slider]');if(!slider)return;const update=()=>{const volume=volumeMilestones[Number(slider.value)]||25000;const tier=ecosystemTier(volume);const note=calc.querySelector('[data-custom-note]');calc.querySelectorAll('[data-volume-label]').forEach(el=>el.textContent=money(volume));if(tier.custom){calc.querySelectorAll('[data-upfront-save]').forEach(el=>el.textContent='CUSTOM');calc.querySelectorAll('[data-platform-save]').forEach(el=>el.textContent='CUSTOM');calc.querySelectorAll('[data-firstyear-save]').forEach(el=>el.textContent='CUSTOM QUOTE');if(note)note.hidden=false;}else{const firstYear=tier.upfront+tier.monthly*12;calc.querySelectorAll('[data-upfront-save]').forEach(el=>el.textContent=money(tier.upfront));calc.querySelectorAll('[data-platform-save]').forEach(el=>{el.textContent=el.closest('.ecosystem-result-hero')?`${money(tier.monthly)}/MO`:money(tier.monthly);});calc.querySelectorAll('[data-firstyear-save]').forEach(el=>el.textContent=money(firstYear));if(note)note.hidden=true;}};slider.addEventListener('input',update);update();});
 })();
 
+/* V24 — Preserve selected calculator volume */
+(() => {const values=[3000,5000,10000,25000,40000,60000,100000,200000,500000,1000000];const closest=value=>{let best=0,diff=Infinity;values.forEach((v,i)=>{const d=Math.abs(v-value);if(d<diff){diff=d;best=i;}});return best;};document.querySelectorAll('[data-preserve-volume]').forEach(link=>{link.addEventListener('click',()=>{const type=link.getAttribute('data-preserve-volume');const card=link.closest(type==='processing'?'[data-processing-calc]':'[data-ecosystem-calc]');const slider=card&&card.querySelector('[data-volume-slider]');if(!slider)return;const selected=values[Number(slider.value)]||25000;const href=new URL(link.getAttribute('href'),window.location.href);href.searchParams.set('volume',selected);link.setAttribute('href',href.pathname+href.search+href.hash);},{passive:true});});const requested=Number(new URLSearchParams(location.search).get('volume'));if(requested>0){const idx=closest(requested);document.querySelectorAll('[data-volume-slider]').forEach(slider=>{slider.value=idx;slider.dispatchEvent(new Event('input',{bubbles:true}));});}})();
 
-/* =========================================================
-   V24 — Preserve selected calculator volume on click-through
-   and initialize Payments-page calculators from ?volume=
-   ========================================================= */
-(() => {
-  const volumeMilestonesV24 = [3000, 5000, 10000, 25000, 40000, 60000, 100000, 200000, 500000, 1000000];
+/* V57 — fixed-header anchor correction on mobile */
+(() => {const mobile=()=>matchMedia('(max-width: 640px)').matches;const offset=()=>{const h=document.querySelector('.site-header');return(h?h.getBoundingClientRect().height:82)+28;};const move=(hash,smooth=false)=>{if(!mobile()||!hash||hash==='#top')return;let el;try{el=document.querySelector(hash);}catch(_){return;}if(!el)return;const y=el.getBoundingClientRect().top+scrollY-offset();scrollTo({top:Math.max(0,y),behavior:smooth?'smooth':'auto'});};document.addEventListener('DOMContentLoaded',()=>{if(location.hash)setTimeout(()=>move(location.hash),90);document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const hash=a.getAttribute('href');if(!mobile()||!hash||hash==='#')return;const target=document.querySelector(hash);if(!target)return;e.preventDefault();history.pushState(null,'',hash);move(hash,true);}));});addEventListener('hashchange',()=>setTimeout(()=>move(location.hash),20));})();
 
-  const closestIndex = (value) => {
-    let best = 0;
-    let diff = Infinity;
-    volumeMilestonesV24.forEach((v, i) => {
-      const d = Math.abs(v - value);
-      if (d < diff) { diff = d; best = i; }
-    });
-    return best;
-  };
-
-  document.querySelectorAll('[data-preserve-volume]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const type = link.getAttribute('data-preserve-volume');
-      const card = link.closest(type === 'processing' ? '[data-processing-calc]' : '[data-ecosystem-calc]');
-      const slider = card && card.querySelector('[data-volume-slider]');
-      if (!slider) return;
-
-      const selected = volumeMilestonesV24[Number(slider.value)] || 25000;
-      const href = new URL(link.getAttribute('href'), window.location.href);
-      href.searchParams.set('volume', selected);
-      link.setAttribute('href', href.pathname + href.search + href.hash);
-    }, { passive: true });
-  });
-
-  const params = new URLSearchParams(window.location.search);
-  const requestedVolume = Number(params.get('volume'));
-  if (requestedVolume > 0) {
-    const idx = closestIndex(requestedVolume);
-    document.querySelectorAll('[data-volume-slider]').forEach(slider => {
-      slider.value = idx;
-      slider.dispatchEvent(new Event('input', { bubbles: true }));
-    });
-  }
-})();
-
-/* =========================================================
-   V57 — fixed-header anchor correction on mobile
-   Ensures same-page sections never land underneath the header.
-   ========================================================= */
-(() => {
-  const mobile = () => window.matchMedia('(max-width: 640px)').matches;
-  const headerOffset = () => {
-    const h = document.querySelector('.site-header');
-    return (h ? h.getBoundingClientRect().height : 82) + 28;
-  };
-  const scrollToHash = (hash, smooth = false) => {
-    if (!mobile() || !hash || hash === '#top') return;
-    let el;
-    try { el = document.querySelector(hash); } catch (_) { return; }
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - headerOffset();
-    window.scrollTo({ top: Math.max(0, y), behavior: smooth ? 'smooth' : 'auto' });
-  };
-  document.addEventListener('DOMContentLoaded', () => {
-    if (location.hash) setTimeout(() => scrollToHash(location.hash, false), 90);
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-      const hash = a.getAttribute('href');
-      if (!mobile() || !hash || hash === '#') return;
-      const target = document.querySelector(hash);
-      if (!target) return;
-      e.preventDefault();
-      history.pushState(null, '', hash);
-      scrollToHash(hash, true);
-    }));
-  });
-  window.addEventListener('hashchange', () => setTimeout(() => scrollToHash(location.hash, false), 20));
-})();
+/* V71 — Propel Contractor Suite homepage feature */
+(() => {const mount=()=>{if(!document.querySelector('link[href*="propel-contractor-home.css"]')){const link=document.createElement('link');link.rel='stylesheet';link.href='propel-contractor-home.css?v=71';document.head.appendChild(link);}const mainNav=document.querySelector('.main-nav');if(mainNav&&!mainNav.querySelector('a[href="propel-contractor-suite/"]')){const item=document.createElement('a');item.href='propel-contractor-suite/';item.textContent='Contractor Suite';mainNav.insertBefore(item,mainNav.querySelector('.nav-cta')||null);}const footer=document.querySelector('footer');if(footer&&!footer.querySelector('a[href="propel-contractor-suite/"]')){const kingdom=[...footer.querySelectorAll('a')].find(a=>a.href.includes('kingdompropel.com'));const item=document.createElement('a');item.href='propel-contractor-suite/';item.textContent='Propel Contractor Suite';if(kingdom&&kingdom.parentNode)kingdom.parentNode.insertBefore(item,kingdom);}if(document.getElementById('contractor-suite'))return;const payments=document.getElementById('payments');if(!payments)return;payments.insertAdjacentHTML('beforebegin',`<section class="pcs-home-feature" id="contractor-suite" aria-labelledby="pcs-home-heading"><div class="pcs-home-glow pcs-home-glow-one"></div><div class="pcs-home-glow pcs-home-glow-two"></div><div class="container pcs-home-grid"><div class="pcs-home-copy visible"><div class="pcs-home-kicker"><span></span> NEW FROM EAGLE VISION DIGITAL</div><img class="pcs-home-logo" src="assets/propel-logo-approved-lockup-v32.png" alt="Propel by Eagle Vision"><p class="pcs-home-product">CONTRACTOR SUITE</p><h2 id="pcs-home-heading">Run your business.<br>Empower your team.<br><em>Propel your growth.</em></h2><p>The connected business operating system being developed for contractors—from the first inquiry and estimate to crews, job costs, customer communication and long-term property care.</p><div class="pcs-home-points"><span>CRM + Leads</span><span>Estimates</span><span>Jobs + Crews</span><span>Profit Guard</span><span>Property Passport</span><span>AI Tools</span></div><div class="pcs-home-actions"><a class="pcs-home-primary" href="propel-contractor-suite/">Explore Contractor Suite <span>→</span></a><a class="pcs-home-secondary" href="propel-contractor-suite/#request-demo">Request a Demo</a></div><small>Product vision preview. Demonstrations, early-access participation and feature availability remain subject to readiness and approval.</small></div><div class="pcs-home-visual visible"><div class="pcs-home-preview-label">PLATFORM VISION PREVIEW</div><div class="pcs-home-screen"><div class="pcs-home-screen-bar"><i></i><i></i><i></i><b>Propel Contractor Suite</b><span>OWNER WORKSPACE</span></div><div class="pcs-home-app"><aside><div class="pcs-home-mark">P</div><span class="active">⌂</span><span>◎</span><span>▤</span><span>✓</span><span>◫</span><span>⚙</span></aside><div class="pcs-home-main"><div class="pcs-home-main-head"><div><small>CONNECTED OPERATIONS</small><strong>Business Overview</strong></div><button type="button">New Estimate +</button></div><div class="pcs-home-kpis"><article><small>OPEN JOBS</small><b>18</b><em>6 crew-ready</em></article><article><small>SALES PIPELINE</small><b>$284K</b><em>12 opportunities</em></article><article><small>FORECAST MARGIN</small><b>31.4%</b><em>Profit Guard</em></article></div><div class="pcs-home-board"><div class="pcs-home-board-title"><strong>Today's Operating Board</strong><span>LIVE</span></div><div><i class="green"></i><b>Oak Ridge Remodel</b><span>Crew A · Field ready</span><em>ON TRACK</em></div><div><i class="blue"></i><b>Harbor Roof Repair</b><span>Materials confirmed</span><em>READY</em></div><div><i class="amber"></i><b>Pinecrest Maintenance</b><span>Customer approved</span><em>SCHEDULE</em></div></div></div></div></div><div class="pcs-home-phone"><small>PROPERTY PASSPORT</small><h3>Your property.<br>One connected history.</h3><div><span>COMPLETED WORK</span><b>12</b></div><div><span>OPEN REQUESTS</span><b>2</b></div><div><span>NEXT SERVICE</span><b>21d</b></div><button type="button">View Property</button></div><div class="pcs-home-callout"><i>↗</i><span><b>PROFIT GUARD</b><small>Estimate → cost → margin</small></span></div></div></div></section>`);};document.readyState==='loading'?document.addEventListener('DOMContentLoaded',mount):mount();})();
