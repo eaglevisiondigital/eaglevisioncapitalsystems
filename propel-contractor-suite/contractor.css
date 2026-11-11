@@ -387,19 +387,19 @@ textarea:focus-visible {
   color: #deeeec;
 }
 .pcs-mark {
-  width: 29px;
-  height: 29px;
+  width: 32px;
+  height: 32px;
   overflow: hidden;
-  border-radius: 6px;
-  background: #48f5ad;
+  border-radius: 8px;
+  background: transparent;
   margin: 0 0 11px 5px;
+  box-shadow: 0 0 12px #48f5ad45;
 }
 .pcs-mark img {
   display: block;
-  width: 26px;
-  height: 28px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
 }
 .pcs-app aside > span {
   display: flex;
@@ -638,10 +638,11 @@ textarea:focus-visible {
   margin-bottom: 13px;
 }
 .pcs-phone-brand img {
-  width: 16px;
-  height: 17px;
-  object-fit: contain;
-  mix-blend-mode: screen;
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #48f5ad55;
 }
 .pcs-phone-brand span {
   font-size: 6px;
