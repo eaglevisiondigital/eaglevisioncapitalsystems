@@ -4123,6 +4123,37 @@ textarea:focus-visible {
   }
 }
 
+/* Keep desktop comparison tags in two intentional rows; preserve mobile pills. */
+@media (min-width: 600px) {
+  .pcs-cloud {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 6px;
+    width: 100%;
+  }
+  .pcs-cloud span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 28px;
+    padding: 5px 4px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 600px) and (max-width: 1199px) {
+  .pcs-cloud span {
+    font-size: 9px;
+  }
+}
+@media (min-width: 600px) and (max-width: 699px) {
+  .pcs-cloud span {
+    font-size: 8px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
