@@ -1310,7 +1310,6 @@ textarea:focus-visible {
 }
 .pcs-industries article:nth-child(8) .pcs-icon {
   color: #ffb800;
-  fill: #ffcf31;
 }
 .pcs-industries article:nth-child(10) .pcs-icon {
   color: #00a7ed;
@@ -2078,7 +2077,7 @@ textarea:focus-visible {
     width: 46%;
   }
   .pcs-closing-brands .pcs-propel-lockup {
-    width: 54%;
+    width: calc(54% - 22px);
     padding: 5px;
   }
   .pcs-request-copy {
@@ -3045,7 +3044,7 @@ textarea:focus-visible {
     margin: 0;
   }
   .pcs-closing-brands .pcs-propel-lockup {
-    width: 55%;
+    width: calc(55% - 17px);
     padding: 5px;
   }
   .pcs-request-copy h2 {
