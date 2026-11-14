@@ -19,10 +19,11 @@
       as="image"
       href="../assets/propel-contractor-suite-approved-v73.webp"
     />
-    <link rel="stylesheet" href="demo.css?v=1" />
-    <script src="demo.js?v=1" defer></script>
+    <link rel="stylesheet" href="demo.css?v=2" />
+    <script src="demo.js?v=2" defer></script>
     <script src="anchors.js?v=1" defer></script>
     <script src="modules.js?v=1" defer></script>
+    <script src="walkthrough.js?v=1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to demo content</a>
@@ -119,11 +120,17 @@
       <nav id="module-nav" aria-label="Contractor Suite modules"></nav>
       <div class="sidebar-footer">
         <span class="demo-dot"></span> SYNTHETIC DEMO
-        <small>Explore freely. No live customer data.</small
-        ><a href="/propel-contractor-suite/">← Back to Contractor Suite</a>
+        <small>Explore freely. No live customer data.</small>
+        <button class="lead-sidebar-cta" type="button" data-lead-launch>
+          Request a Walkthrough
+        </button>
+        <a href="/propel-contractor-suite/">← Back to Contractor Suite</a>
       </div>
     </aside>
     <main id="main" tabindex="-1"></main>
+    <button class="lead-mobile-cta" type="button" data-lead-launch>
+      Request a Walkthrough <span aria-hidden="true">→</span>
+    </button>
     <div class="toast" id="toast" role="status" hidden></div>
     <dialog id="demo-dialog" aria-labelledby="dialog-title">
       <div class="dialog-top">
@@ -137,6 +144,143 @@
         </button>
       </div>
       <div id="dialog-body"></div>
+    </dialog>
+    <dialog
+      id="walkthrough-dialog"
+      class="walkthrough-dialog"
+      aria-labelledby="walkthrough-title"
+      aria-describedby="walkthrough-intro"
+    >
+      <div class="dialog-top">
+        <div>
+          <p class="walkthrough-eyebrow">PROPEL CONTRACTOR SUITE</p>
+          <h2 id="walkthrough-title">
+            See how Propel could work for your business.
+          </h2>
+        </div>
+        <button
+          class="icon-button"
+          type="button"
+          data-lead-close
+          aria-label="Close walkthrough request"
+        >
+          ×
+        </button>
+      </div>
+      <p id="walkthrough-intro" class="walkthrough-intro">
+        Tell us where to reach you for a personalized walkthrough. You can also
+        keep exploring the demo.
+      </p>
+      <form
+        id="walkthrough-form"
+        name="propel-contractor-demo-lead"
+        method="POST"
+        action="/propel-contractor-suite/thank-you"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        aria-describedby="walkthrough-use"
+      >
+        <input
+          type="hidden"
+          name="form-name"
+          value="propel-contractor-demo-lead"
+        />
+        <input
+          type="hidden"
+          name="lead_source"
+          value="Virtual Demo — Personalized Walkthrough"
+        />
+        <input type="hidden" name="demo_view" value="dashboard" />
+        <input type="hidden" name="submitted_at" value="" />
+        <p hidden>
+          <label
+            >Leave this field empty
+            <input name="bot-field" tabindex="-1" autocomplete="off"
+          /></label>
+        </p>
+        <div class="form-grid">
+          <label class="field" for="walkthrough-first-name"
+            >First name
+            <input
+              id="walkthrough-first-name"
+              name="first_name"
+              type="text"
+              autocomplete="given-name"
+              maxlength="80"
+              required
+            />
+          </label>
+          <label class="field" for="walkthrough-email"
+            >Email
+            <input
+              id="walkthrough-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              maxlength="254"
+              required
+            />
+          </label>
+          <label class="field" for="walkthrough-business"
+            >Business name <span class="field-optional">(optional)</span>
+            <input
+              id="walkthrough-business"
+              name="business_name"
+              type="text"
+              autocomplete="organization"
+              maxlength="120"
+            />
+          </label>
+          <label class="field" for="walkthrough-phone"
+            >Phone number <span class="field-optional">(optional)</span>
+            <input
+              id="walkthrough-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              maxlength="50"
+            />
+          </label>
+        </div>
+        <p id="walkthrough-use" class="walkthrough-use">
+          Eagle Vision will use these details to respond to your walkthrough
+          request.
+          <a
+            href="/propel-contractor-suite/privacy"
+            target="_blank"
+            rel="noopener"
+            >Lead privacy notice</a
+          >.
+        </p>
+        <p
+          id="walkthrough-error"
+          class="walkthrough-error"
+          role="alert"
+          hidden
+        ></p>
+        <div class="walkthrough-actions">
+          <button class="btn primary" type="submit">
+            Request a Personalized Walkthrough
+          </button>
+          <button class="walkthrough-skip" type="button" data-lead-close>
+            Continue Exploring
+          </button>
+        </div>
+      </form>
+      <div
+        id="walkthrough-success"
+        class="walkthrough-success"
+        role="status"
+        hidden
+      >
+        <p>
+          Thank you. Eagle Vision has received your request and can follow up
+          using the details you shared.
+        </p>
+        <button class="btn primary" type="button" data-lead-close>
+          Continue Exploring
+        </button>
+      </div>
     </dialog>
     <noscript
       ><p class="no-script">

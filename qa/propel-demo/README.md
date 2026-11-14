@@ -6,9 +6,24 @@ Built November 14, 2026 against the seven supplied approved mockups, including t
 
 The buildless demo lives at `/propel-contractor-suite/demo/`. It includes **17 sidebar modules, 19 bookmarkable views, and 52 internal tab views**, including all seven visual anchors. The existing website remains a static site; no package installation, backend, authentication, database, or hosting configuration is added to it.
 
-All demo records are synthetic. Edits are browser-memory state, reset on reload, and never contact customers, send email, charge a payment method, or write to a service. CSV buttons generate actual, clearly labeled synthetic downloads.
+All sample demo records are synthetic. Edits to sample records are browser-memory state, reset on reload, and never contact customers, send email, charge a payment method, or write to a service. CSV buttons generate actual, clearly labeled synthetic downloads. The separate personalized-walkthrough form collects real website inquiries only when a visitor explicitly submits it.
 
 The entire sidebar is constructed exactly once in `demo.js`. It has the same 17 links, order, dimensions, spacing, icons, and CSS on every view. Navigation changes only `aria-current="page"` and the corresponding active styling. Its actual DOM nodes survive page switches. Tablet retains the sidebar; mobile uses the same sidebar in an accessible drawer with backdrop, Escape close, and inert content while closed.
+
+## Optional personalized-walkthrough requests
+
+The demo remains open to explore. After the third distinct screen and a brief pause, a skippable request form appears once per browser-tab visit. Dismissal persists through reloads. Visitors can reopen it using the shared sidebar button or the mobile walkthrough button.
+
+- Required: **first name and email**.
+- Optional: **business name and phone number**. Phone accepts familiar local or international formats; it has no required constraint.
+- Primary action: **Request a Personalized Walkthrough**.
+- Skip action: **Continue Exploring**, plus close/Escape/backdrop dismissal.
+- Real inquiries are submitted as URL-encoded requests to the separately registered Netlify form `propel-contractor-demo-lead`. A honeypot is included. Existing inquiry forms are untouched.
+- Successful submissions show an inline confirmation. Failed requests preserve the entered details and allow retry.
+- Contact details never enter the synthetic CRM or browser storage. The submitted form fields are cleared after success; session storage holds only viewed-screen IDs and prompt/submission flags.
+- This form requests a response about a walkthrough. It does not sign visitors up for promotional email or configure outbound notifications.
+
+The shared sidebar retains all 17 items and identical structure on every view. The added CTA is shared across every module.
 
 ## Exact routes
 
@@ -55,6 +70,7 @@ Added application files:
 - `propel-contractor-suite/demo/demo.js` — shared sidebar, routing, dialogs, synthetic state, search, common actions, and CSV exports.
 - `propel-contractor-suite/demo/anchors.js` — seven approved anchor experiences and related interactions.
 - `propel-contractor-suite/demo/modules.js` — module-specific supporting views, tabs, and sample workflows.
+- `propel-contractor-suite/demo/walkthrough.js` — optional real inquiry prompt, once-per-visit behavior, and Netlify submission handling.
 
 Added exact-source artwork and provenance:
 
@@ -75,6 +91,7 @@ Added verification files:
 
 - `qa/propel-demo/check-demo.cjs`
 - `qa/propel-demo/check-accessibility.cjs`
+- `qa/propel-demo/check-walkthrough.cjs`
 - `qa/propel-demo/README.md`
 
 The approved logo and application icon are reused from existing assets without modification. No other existing file is changed.
@@ -92,7 +109,7 @@ The approved logo and application icon are reused from existing assets without m
 
 The 114 view checks cover document overflow, broken images, clipped headings and metric text, cards outside the viewport, sidebar/content overlap, exactly one active navigation item, and identical sidebar geometry across screens. It also verifies sidebar DOM identity through all module clicks, every internal tab on desktop and mobile, employee and 1099 hours tied to jobs, lead stage advancement and follow-up tasks, record creation forms, Cancel behavior, expense classification, return credits, workspace save/reset, idempotent receipt decisions, generated change orders, invoice payment balances, CSV contents, search, CTA routing, the mobile drawer, and the industry carousel. WebKit independently checks all seven anchors at 390 × 844.
 
-`check-accessibility.cjs` runs axe WCAG A/AA checks on all 19 desktop/mobile views plus the new-lead dialog at both sizes. Keyboard checks include tab-arrow navigation, Escape dismissal, drawer access, and search shortcuts. Horizontal scrolling is confined to deliberately scrollable data tables, timelines, workflow rows, and the mobile industry carousel.
+`check-accessibility.cjs` runs axe WCAG A/AA checks on all 19 desktop/mobile views plus the synthetic new-lead and real walkthrough dialogs at both sizes. `check-walkthrough.cjs` independently verifies first-visit timing, skip/Escape, optional phone/business fields, required-field validation, failure/retry, submission payloads, success, and separation from synthetic records on desktop, phone, and WebKit. Keyboard checks include tab-arrow navigation, Escape dismissal, drawer access, and search shortcuts. Horizontal scrolling is confined to deliberately scrollable data tables, timelines, workflow rows, and the mobile industry carousel.
 
 Browser captures and JSON results are saved outside the published website in `/private/tmp/propel-demo-qa/`. Existing landing-page regression artifacts are in `/private/tmp/propel-v73-qa/`.
 
@@ -103,7 +120,7 @@ Syntax checks use `node --check` on all new JavaScript and QA scripts. Source fo
 - **114/114 responsive view checks passed** across all six sizes; no document overflow, broken images, clipped headings/metrics, outside cards, or sidebar/content overlap.
 - **52/52 desktop and 52/52 mobile tab checks passed.** Sidebar geometry and DOM identity stayed consistent across every module.
 - **All seven WebKit anchor checks passed** at 390 × 844.
-- **40/40 axe view/dialog checks passed**, with zero reported WCAG A/AA violations.
+- **42/42 axe view/dialog checks passed**, with zero reported WCAG A/AA violations.
 - **5/5 existing landing-page regression cases passed**, including native form payload/redirect verification through interception, mobile navigation, sticky request CTA, and privacy/thank-you pages.
 - Record creation, Cancel, lead progression/follow-up, employee and 1099 job hours, receipt-decision idempotence, generated change orders, invoice balances, expense classification, returns, CSV contents, workspace save/reset, carousel navigation, and mobile drawer checks passed.
 - Additional settings checks passed for primary-trade persistence and long business names at all six viewport widths.
@@ -117,6 +134,7 @@ Serve the repository with a static HTTP server on port 8765. Provide externally 
 ```sh
 node qa/propel-demo/check-demo.cjs
 node qa/propel-demo/check-accessibility.cjs
+node qa/propel-demo/check-walkthrough.cjs
 node qa/propel-v73/check-page.cjs
 ```
 

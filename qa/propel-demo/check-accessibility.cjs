@@ -12,6 +12,12 @@ const axePath = require.resolve("axe-core/axe.min.js");
   try {
     for (const width of [1440, 390]) {
       const page = await browser.newPage({ viewport: { width, height: 900 } });
+      await page.addInitScript(() =>
+        sessionStorage.setItem(
+          "pcs-demo-walkthrough-visit-v1",
+          JSON.stringify({ views: [], offered: true, submitted: false }),
+        ),
+      );
       await page.goto(base + "/propel-contractor-suite/demo/", {
         waitUntil: "networkidle",
       });
@@ -53,6 +59,22 @@ const axePath = require.resolve("axe-core/axe.min.js");
         width,
         route: "new-lead-dialog",
         violations: form.violations,
+      });
+      await page
+        .getByRole("button", { name: "Close dialog", exact: true })
+        .click();
+      await page
+        .locator(width <= 760 ? ".lead-mobile-cta" : ".lead-sidebar-cta")
+        .click();
+      const walkthrough = await page.evaluate(() =>
+        axe.run(document, {
+          runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21aa"] },
+        }),
+      );
+      results.push({
+        width,
+        route: "real-walkthrough-dialog",
+        violations: walkthrough.violations,
       });
       await page.close();
     }

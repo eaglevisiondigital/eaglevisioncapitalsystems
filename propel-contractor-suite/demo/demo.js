@@ -737,6 +737,9 @@
     }
     sidebar(false);
     hidePopovers();
+    document.dispatchEvent(
+      new CustomEvent("propel:demo-view", { detail: { route: D.route } }),
+    );
   };
   D.actions["close-dialog"] = () => dialog().close();
   D.actions.reset = () => {

@@ -40,7 +40,15 @@ const results = [],
   errors = [],
   badResponses = [],
   activeBrowsers = [];
-function monitor(p) {
+async function monitor(p) {
+  // Returning visitors have already dismissed the one-time inquiry prompt.
+  // A separate form suite verifies first-visit timing, optional fields, and delivery payloads.
+  await p.addInitScript(() =>
+    sessionStorage.setItem(
+      "pcs-demo-walkthrough-visit-v1",
+      JSON.stringify({ views: [], offered: true, submitted: false }),
+    ),
+  );
   p.on("pageerror", (e) => errors.push(e.message));
   p.on("response", (r) => {
     if (r.status() >= 400) badResponses.push(r.url() + " " + r.status());
@@ -120,7 +128,7 @@ async function layout(p) {
     [320, 740],
   ]) {
     const p = await browser.newPage({ viewport: { width, height } });
-    monitor(p);
+    await monitor(p);
     let navBaseline;
     for (const route of routes) {
       await go(p, route);
@@ -164,7 +172,7 @@ async function layout(p) {
     await p.close();
   }
   const p = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
-  monitor(p);
+  await monitor(p);
   // Every internal view is real and switches content without altering the sidebar.
   let tabCount = 0;
   for (const route of routes) {
@@ -488,7 +496,7 @@ async function layout(p) {
   const safari = await webkit.launch({ headless: true });
   activeBrowsers.push(safari);
   const sp = await safari.newPage({ viewport: { width: 390, height: 844 } });
-  monitor(sp);
+  await monitor(sp);
   for (const route of anchors) {
     await go(sp, route);
     const l = await layout(sp);

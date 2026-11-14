@@ -5197,3 +5197,169 @@ main.dark-page .anchor-links {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* Optional real walkthrough inquiry, separate from synthetic sample forms. */
+.lead-sidebar-cta {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0;
+  padding: 9px 8px;
+  min-height: 38px;
+  border: 1px solid #73f5cc;
+  border-radius: 8px;
+  background: #b2ffe2;
+  color: #004633;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+.lead-sidebar-cta:hover {
+  background: #daffef;
+}
+.lead-mobile-cta {
+  display: none;
+}
+.walkthrough-dialog {
+  width: min(600px, calc(100vw - 30px));
+  padding: 27px;
+  background: linear-gradient(130deg, #fff, #f1faf6);
+  border: 1px solid #96d8bc;
+}
+.walkthrough-dialog .dialog-top {
+  align-items: flex-start;
+  border-bottom-color: #c8e4d6;
+  gap: 18px;
+}
+.walkthrough-dialog .dialog-top h2 {
+  font-size: 26px;
+  line-height: 1.17;
+  max-width: 440px;
+}
+.walkthrough-eyebrow {
+  margin: 0 0 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #00694e;
+}
+.walkthrough-intro {
+  font-size: 14px;
+  color: #34594b;
+  line-height: 1.6;
+  margin: 0 0 21px;
+}
+.walkthrough-dialog .field {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.walkthrough-dialog .field input {
+  display: block;
+  margin-top: 7px;
+  background: white;
+}
+.field-optional {
+  color: #526b60;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.walkthrough-use {
+  font-size: 11px;
+  color: #4a6558;
+  line-height: 1.6;
+  margin: 17px 0;
+}
+.walkthrough-use a {
+  color: #006a4b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.walkthrough-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 17px;
+}
+.walkthrough-actions > .btn {
+  min-height: 46px;
+}
+.walkthrough-skip {
+  border: 0;
+  background: transparent;
+  color: #315d4c;
+  font-size: 12px;
+  font-weight: 700;
+  min-height: 34px;
+  border-radius: 6px;
+  padding: 7px;
+}
+.walkthrough-skip:hover {
+  background: #e1f5e9;
+}
+.walkthrough-error {
+  font-size: 12px;
+  color: #9d1231;
+  background: #ffeaf0;
+  border: 1px solid #e5a5b6;
+  border-radius: 7px;
+  padding: 11px;
+  line-height: 1.5;
+}
+.walkthrough-success p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #254d3c;
+}
+.walkthrough-success .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+@media (max-width: 760px) {
+  main,
+  main.dark-page {
+    padding-bottom: 90px;
+  }
+  .lead-mobile-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    z-index: 44;
+    right: 15px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    min-height: 42px;
+    padding: 11px 16px;
+    border: 1px solid #6de8bf;
+    border-radius: 24px;
+    background: #b2ffe2;
+    color: #004633;
+    box-shadow: 0 5px 22px #002e3540;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .walkthrough-dialog {
+    padding: 21px;
+    max-height: calc(100dvh - 24px);
+  }
+  .walkthrough-dialog .dialog-top h2 {
+    font-size: 24px;
+  }
+  .walkthrough-intro {
+    font-size: 13px;
+    margin-bottom: 17px;
+  }
+  .walkthrough-dialog .form-grid {
+    gap: 13px;
+  }
+  .walkthrough-dialog .field input {
+    min-height: 43px;
+  }
+  .walkthrough-dialog .walkthrough-actions > .btn {
+    font-size: 12px;
+  }
+  .walkthrough-use {
+    margin: 15px 0;
+    font-size: 10px;
+  }
+}
