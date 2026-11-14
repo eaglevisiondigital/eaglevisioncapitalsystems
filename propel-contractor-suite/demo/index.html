@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#003c3e" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Explore the Propel Contractor Suite Digital Blueprint: a connected, interactive showcase built entirely with synthetic demo data."
+    />
+    <title>Owner Dashboard | Propel Contractor Suite Demo</title>
+    <link rel="icon" href="../../assets/favicon.ico" />
+    <link
+      rel="preload"
+      as="image"
+      href="../assets/propel-contractor-suite-approved-v73.webp"
+    />
+    <link rel="stylesheet" href="demo.css?v=1" />
+    <script src="demo.js?v=1" defer></script>
+    <script src="anchors.js?v=1" defer></script>
+    <script src="modules.js?v=1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to demo content</a>
+    <header class="topbar">
+      <a
+        class="brand"
+        href="#dashboard"
+        aria-label="Propel Contractor Suite demo dashboard"
+        ><img
+          src="../assets/propel-contractor-suite-approved-v73.webp"
+          width="1614"
+          height="522"
+          alt="Propel Contractor Suite by Eagle Vision"
+      /></a>
+      <button
+        class="menu-toggle icon-button"
+        aria-label="Open demo navigation"
+        aria-expanded="false"
+        aria-controls="demo-sidebar"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+      <div class="workspace-switch">
+        <button
+          class="workspace-button"
+          id="tour-toggle"
+          aria-expanded="false"
+          aria-controls="tour-menu"
+        >
+          <span class="workspace-icon" aria-hidden="true">▥</span
+          ><span>Saul 2 Paul Builders &amp; Gutters <small>DEMO</small></span
+          ><span aria-hidden="true">⌄</span>
+        </button>
+        <nav
+          class="popover tour-menu"
+          id="tour-menu"
+          aria-label="Signature demo screens"
+          hidden
+        ></nav>
+      </div>
+      <div class="global-search">
+        <label class="sr-only" for="demo-search"
+          >Search demo modules, jobs, and records</label
+        ><span aria-hidden="true">⌕</span
+        ><input
+          id="demo-search"
+          type="search"
+          placeholder="Search jobs, leads, estimates, invoices, and more…"
+          autocomplete="off"
+        /><kbd>⌘ K</kbd>
+        <div
+          class="popover search-results"
+          id="search-results"
+          role="region"
+          aria-label="Search results"
+          hidden
+        ></div>
+      </div>
+      <div class="notifications-wrap">
+        <button
+          class="icon-button notifications"
+          aria-label="Show demo notifications"
+          aria-expanded="false"
+          aria-controls="notifications-menu"
+        ></button>
+        <div class="popover" id="notifications-menu" hidden></div>
+      </div>
+      <button
+        class="profile"
+        id="profile-toggle"
+        aria-expanded="false"
+        aria-controls="profile-menu"
+      >
+        <span class="avatar">DU</span
+        ><span><b>Demo User</b><small>Owner / Admin</small></span
+        ><span aria-hidden="true">⌄</span>
+      </button>
+      <div class="popover profile-menu" id="profile-menu" hidden>
+        <p>
+          <b>Synthetic demo workspace</b><br />Changes last for this browser
+          session.
+        </p>
+        <a href="#settings">Demo settings</a
+        ><button data-action="reset">Reset demo data</button
+        ><a href="/propel-contractor-suite/">Back to Contractor Suite</a>
+      </div>
+    </header>
+    <button
+      class="sidebar-backdrop"
+      aria-label="Close demo navigation"
+      hidden
+    ></button>
+    <aside class="sidebar" id="demo-sidebar" aria-label="Demo sidebar">
+      <nav id="module-nav" aria-label="Contractor Suite modules"></nav>
+      <div class="sidebar-footer">
+        <span class="demo-dot"></span> SYNTHETIC DEMO
+        <small>Explore freely. No live customer data.</small
+        ><a href="/propel-contractor-suite/">← Back to Contractor Suite</a>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="demo-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <h2 id="dialog-title"></h2>
+        <button
+          class="icon-button"
+          data-action="close-dialog"
+          aria-label="Close dialog"
+        >
+          ×
+        </button>
+      </div>
+      <div id="dialog-body"></div>
+    </dialog>
+    <noscript
+      ><p class="no-script">
+        This interactive synthetic demo requires JavaScript.
+        <a href="/propel-contractor-suite/"
+          >Return to the Contractor Suite page.</a
+        >
+      </p></noscript
+    >
+  </body>
+</html>
